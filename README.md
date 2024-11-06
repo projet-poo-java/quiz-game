@@ -9,7 +9,7 @@ To run the QuizApp project locally, follow these steps:
     cd quizApp
     ```
 
-    Create and add the following configuration to ``launch.json`` in `.vscode` folder the application:
+    Add the following configuration to ``launch.json`` in `.vscode` folder the application:
 
     ```json
     {

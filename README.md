@@ -1,4 +1,5 @@
-# How to Run This Project Locally
+![Badge](https://img.shields.io/badge/JDK-23-brightgreen) ![Badge](https://img.shields.io/badge/JavaFx-21-brightgreen)
+### How to Run This Project Locally
 
 To run the QuizApp project locally, follow these steps:
 

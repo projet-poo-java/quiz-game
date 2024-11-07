@@ -12,42 +12,30 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="600.0" style="-fx-background-color: #5D3282;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="988.0" style="-fx-background-color: #FBFAFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
    <children>
-      <AnchorPane prefHeight="46.0" prefWidth="600.0" style="-fx-background-color: #512B74;">
+      <AnchorPane prefHeight="46.0" prefWidth="600.0" style="-fx-background-color: #FBFAFF;">
          <children>
-            <Button fx:id="btnMinimize" layoutX="527.0" layoutY="10.0" onAction="#minimizeWindow" style="-fx-background-color: #65E329;" text="--" textFill="WHITE">
+            <Button fx:id="btnMinimize" layoutX="921.0" layoutY="11.0" onAction="#minimizeWindow" style="-fx-background-color: #65E329;" text="--" textFill="WHITE">
                <font>
                   <Font name="Algerian" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="btnClose" layoutX="560.0" layoutY="9.0" onAction="#closeWindow" style="-fx-background-color: #E05E55;" text="X" textFill="WHITE">
+            <Button fx:id="btnClose" layoutX="954.0" layoutY="10.0" onAction="#closeWindow" style="-fx-background-color: #E05E55;" text="X" textFill="WHITE">
                <font>
                   <Font name="Arial Narrow Bold" size="14.0" />
                </font>
             </Button>
-         </children>
-      </AnchorPane>
-      <AnchorPane prefHeight="68.0" prefWidth="600.0" stylesheets="@../assets/css/style.css">
-         <children>
-            <Label layoutX="31.0" layoutY="7.0" prefHeight="45.0" prefWidth="68.0" style="-fx-border-color: #FDE32F; -fx-padding: 6px;" styleClass="levelNumber" stylesheets="@../assets/css/style.css" text="Login">
-               <font>
-                  <Font name="JetBrainsMono NF Bold" size="20.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Label>
-            <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="537.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="46.0" fitWidth="59.0" layoutX="13.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assets/images/settings.png" />
+                  <Image url="@../assets/images/logo.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="286.0" prefWidth="600.0" style="-fx-background-color: #512B74;" stylesheets="@../assets/css/style.css">
+      <AnchorPane prefHeight="444.0" prefWidth="988.0" style="-fx-background-color: #FBFAFF;" stylesheets="@../assets/css/style.css">
          <children>
-            <VBox layoutX="150.0" layoutY="50.0" prefHeight="254.0" prefWidth="300.0">
+            <VBox layoutX="601.0" layoutY="121.0" prefHeight="254.0" prefWidth="300.0">
                <children>
                   <TextField fx:id="usernameField" prefHeight="45.0" prefWidth="300.0" promptText="Username" style="-fx-background-radius: 30px; -fx-padding: 10px;">
                      <font>
@@ -75,6 +63,11 @@
                         <Insets bottom="5.0" left="10.0" />
                      </VBox.margin>
                   </Label>
+                  <PasswordField fx:id="passwordField1" layoutX="10.0" layoutY="77.0" prefHeight="45.0" prefWidth="300.0" promptText="Confirm password" style="-fx-background-radius: 30px; -fx-padding: 10px;">
+                     <font>
+                        <Font name="Tahoma Bold" size="14.0" />
+                     </font>
+                  </PasswordField>
                   <Button fx:id="loginButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleLogin" prefHeight="45.0" prefWidth="300.0" style="-fx-background-color: #B918C8; -fx-background-radius: 30px;" text="Login" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Tahoma Bold" size="14.0" />
@@ -82,12 +75,30 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
                   </Button>
                </children>
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>
             </VBox>
+            <Label layoutX="649.0" layoutY="85.0" text="Welcome to Quiz Time">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="415.0" fitWidth="444.0" layoutX="57.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/Mobile%20login-rafiki.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="69.0" fitWidth="92.0" layoutX="711.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/logo.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

@@ -1,4 +1,4 @@
-package quizgame.quizgame;
+package quizgame.quizgame.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

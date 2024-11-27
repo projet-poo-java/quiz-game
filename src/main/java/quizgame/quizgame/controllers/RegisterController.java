@@ -33,6 +33,11 @@ public class RegisterController {
         }
     }
 
+    @FXML
+    public void goToLogin(ActionEvent event) {
+        DBUtil.changeScene(event, "login.fxml", "Login", null, null);
+    }
+
     private void showError(String title, String content) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(title);

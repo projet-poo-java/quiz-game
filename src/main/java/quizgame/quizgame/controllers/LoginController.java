@@ -37,6 +37,11 @@ public class LoginController implements Initializable {
         }
     }
 
+    @FXML
+    public void goToRegister(ActionEvent event) {
+        DBUtil.changeScene(event, "register.fxml", "Register", null, null);
+    }
+
     private void showError(String title, String content) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(title);

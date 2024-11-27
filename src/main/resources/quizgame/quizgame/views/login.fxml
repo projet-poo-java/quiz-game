@@ -62,7 +62,7 @@
                         <Font name="JetBrainsMono NF Regular" size="13.0" />
                      </font>
                   </Label>
-                  <Hyperlink layoutX="296.0" layoutY="433.0" text="Register" textFill="#533b7c">
+                  <Hyperlink fx:id="goToRegisterBtn" layoutX="296.0" layoutY="433.0" text="Register" textFill="#533b7c" onAction="#goToRegister">
                      <font>
                         <Font name="JetBrainsMono NF Regular" size="14.0" />
                      </font>

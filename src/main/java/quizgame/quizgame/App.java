@@ -12,9 +12,9 @@ public class App extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("views/register.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("views/home.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 900, 500);
-            stage.setTitle("Quiz Game - Register");
+            stage.setTitle("Quiz Game - Home");
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {

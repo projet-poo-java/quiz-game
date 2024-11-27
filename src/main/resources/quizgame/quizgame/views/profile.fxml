@@ -6,18 +6,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" 
-      prefHeight="500.0" prefWidth="800.0" spacing="20.0" style="-fx-background-color: #111DAE;"
-      xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" 
-      fx:controller="quizgame.quizgame.controllers.ProfileController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" spacing="20.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizgame.quizgame.controllers.ProfileController">
    <children>
-      <Label fx:id="welcomeText" text="Welcome" textFill="#fcb315">
+      <Label fx:id="welcomeText" text="Welcome" textFill="#533b7c">
          <font>
             <Font name="JetBrainsMono NF Bold" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="logoutBtn" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" 
-              style="-fx-background-color: #FCB315;" text="Logout" textFill="WHITE">
+      <Button fx:id="logoutBtn" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #533B7C;" text="Logout" textFill="WHITE">
          <font>
             <Font name="JetBrainsMono NF Bold" size="24.0" />
          </font>

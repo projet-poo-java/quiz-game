@@ -30,7 +30,7 @@
                         <Image url="@../assets/logo.png" />
                      </image>
                   </ImageView>
-                  <TextField fx:id="nameInput" layoutX="22.0" layoutY="200.0" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="190.0" promptText="Email or username *" AnchorPane.leftAnchor="22.0" />
+                  <TextField fx:id="nameInput" layoutX="22.0" layoutY="200.0" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="190.0" promptText="Full Name" AnchorPane.leftAnchor="22.0" />
                   <Label layoutX="92.0" layoutY="118.0" text="Join Us and Start the Challenge!" textFill="#533b7c" AnchorPane.leftAnchor="92.0" AnchorPane.rightAnchor="89.0" AnchorPane.topAnchor="118.0">
                      <font>
                         <Font name="JetBrainsMono NF Bold" size="14.0" />
@@ -46,7 +46,7 @@
                         <Font name="JetBrainsMono NF Bold" size="14.0" />
                      </font>
                   </Label>
-                  <PasswordField fx:id="passwordInput" layoutX="22.0" layoutY="297.0" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="190.0" promptText="Password *" AnchorPane.leftAnchor="22.0" />
+                  <PasswordField fx:id="passwordInput" layoutX="22.0" layoutY="297.0" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="190.0" promptText="Password" AnchorPane.leftAnchor="22.0" />
                   <Button fx:id="registerBtn" layoutX="22.0" layoutY="370.0" mnemonicParsing="false" onAction="#register" prefHeight="42.0" prefWidth="113.0" style="-fx-background-color: #533B7C;" text="Register" textFill="WHITE" AnchorPane.leftAnchor="22.0">
                      <font>
                         <Font name="JetBrainsMono NF Bold" size="14.0" />
@@ -62,23 +62,23 @@
                         <Font name="JetBrainsMono NF Regular" size="13.0" />
                      </font>
                   </Label>
-                  <Hyperlink layoutX="240.0" layoutY="433.0" text="Login" textFill="#533b7c" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="158.0">
+                  <Hyperlink fx:id="goToRegisterBtn" layoutX="240.0" layoutY="433.0" onAction="#goToLogin" text="Login" textFill="#533b7c" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="158.0">
                      <font>
                         <Font name="JetBrainsMono NF Regular" size="14.0" />
                      </font>
                   </Hyperlink>
-                  <TextField fx:id="emailInput" layoutX="234.0" layoutY="200.0" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="190.0" promptText="Email or username *" AnchorPane.rightAnchor="26.0" />
-                  <Label layoutX="236.0" layoutY="173.0" text="Email *" textFill="#696f79" AnchorPane.rightAnchor="155.0">
+                  <TextField fx:id="emailInput" layoutX="234.0" layoutY="200.0" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="190.0" promptText="Email" AnchorPane.rightAnchor="26.0" />
+                  <PasswordField fx:id="confirmPasswordInput" layoutX="234.0" layoutY="297.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="190.0" promptText="Confirm your password" AnchorPane.rightAnchor="26.0" />
+                  <Label layoutX="234.0" layoutY="272.0" text="Confirm Password *" textFill="#696f79">
                      <font>
                         <Font name="JetBrainsMono NF Bold" size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="236.0" layoutY="272.0" text="Confirm password *" textFill="#696f79" AnchorPane.rightAnchor="61.0">
+                  <Label layoutX="233.0" layoutY="173.0" text="Email *" textFill="#696f79">
                      <font>
                         <Font name="JetBrainsMono NF Bold" size="14.0" />
                      </font>
                   </Label>
-                  <PasswordField fx:id="confirmPasswordInput" layoutX="234.0" layoutY="297.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="190.0" promptText="Password *" AnchorPane.rightAnchor="26.0" />
                </children></AnchorPane>
          </children>
       </HBox>

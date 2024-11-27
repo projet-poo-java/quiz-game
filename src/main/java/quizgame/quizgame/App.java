@@ -10,14 +10,18 @@ import java.io.IOException;
 public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("views/hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/quizgame/quizgame/views/hello-view.fxml"));
+
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+        stage.setTitle("Quiz Game");
         stage.setScene(scene);
         stage.show();
     }
 
     public static void main(String[] args) {
         launch();
+        System.out.println("Hello World!");
     }
 }
+
+

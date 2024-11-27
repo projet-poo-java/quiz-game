@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizgame.quizgame.controllers.ResultView">
+   <children>
+      <ImageView fitHeight="608.0" fitWidth="810.0" layoutX="-8.0" layoutY="-8.0">
+         <image>
+            <Image url="@../../../images/purple_watercolour_background_corners.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="317.0" layoutY="401.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/medal.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="202.0" layoutY="49.0" prefHeight="99.0" prefWidth="491.0" text="Congratulations">
+         <font>
+            <Font name="System Italic" size="55.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>

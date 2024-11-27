@@ -1,14 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizgame.quizgame.controllers.QuizPageControler">
 
+    <!-- Background Image -->
+    <children>
+        <ImageView fitHeight="600.0" fitWidth="800.0" preserveRatio="false">
+            <image>
+                <Image url="@/images/backfroundPurple.jpeg"/>
+            </image>
+        </ImageView>
+        <VBox AnchorPane.topAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" spacing="20" style="-fx-background-color: #533B7C; -fx-padding: 10;">
+            <HBox cacheShape="false" centerShape="false" spacing="20">
+                <Pane prefHeight="50.0" prefWidth="827.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <ImageView fitHeight="48.0" fitWidth="48.0">
+                            <image>
+                                <Image url="@../../../images/logo2.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="21.0" fitWidth="82.0" layoutX="56.0" layoutY="15.0">
+                            <image>
+                                <Image url="@../../../images/testme.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="331.0" layoutY="3.0" prefHeight="45.0" prefWidth="172.0" style="-fx-font-size: 30; -fx-text-fill: white;" text="Quiz Game" textOverrun="CLIP">
+                            <font>
+                                <Font name="System Bold" size="30.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+            </HBox>
+        </VBox>
+        <VBox AnchorPane.topAnchor="70.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" alignment="CENTER" spacing="20" style="-fx-padding: 60; -fx-background-color: white;">
+            <Label fx:id="categoryLabel" style="-fx-font-size: 18;" text="Category: General Knowledge" />
+            <ImageView fitHeight="74.0" fitWidth="74.0">
+                <image>
+                    <Image url="@../../../images/question-mark.png" />
+                </image>
+            </ImageView>
+            <Label fx:id="questionNumberLabel" style="-fx-font-size: 18;" text="Question 1/10" />
+            <Label fx:id="questionLabel" style="-fx-font-size: 20;" text="What is 2 + 2?" />
+            <VBox spacing="15" style="-fx-padding: 15;">
+                <HBox spacing="30" style="-fx-alignment: CENTER;">
+                    <VBox style="-fx-border-color: #533B7C; -fx-border-width: 2; -fx-padding: 10; -fx-background-color: #ecf0f1;">
+                        <RadioButton fx:id="choice1RadioButton" onAction="#onChoiceSelected" style="-fx-font-size: 16;" text="Choice 1 Description" />
+                    </VBox>
+                    <VBox style="-fx-border-color: #533B7C; -fx-border-width: 2; -fx-padding: 10; -fx-background-color: #ecf0f1;">
+                        <RadioButton fx:id="choice2RadioButton" onAction="#onChoiceSelected" style="-fx-font-size: 16;" text="Choice 2 Description" />
+                    </VBox>
+                </HBox>
+                <HBox spacing="30" style="-fx-alignment: CENTER;">
+                    <VBox style="-fx-border-color: #533B7C; -fx-border-width: 2; -fx-padding: 10; -fx-background-color: #ecf0f1;">
+                        <RadioButton fx:id="choice3RadioButton" onAction="#onChoiceSelected" style="-fx-font-size: 16;" text="Choice 3 Description" />
+                    </VBox>
+                    <VBox style="-fx-border-color: #533B7C; -fx-border-width: 2; -fx-padding: 10; -fx-background-color: #ecf0f1;">
+                        <RadioButton fx:id="choice4RadioButton" onAction="#onChoiceSelected" style="-fx-font-size: 16;" text="Choice 4 Description" />
+                    </VBox>
+                </HBox>
+            </VBox>
+        </VBox>
+        <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" alignment="CENTER" spacing="10" style="-fx-padding: 10;">
+            <Button onAction="#onQuitButtonClick" prefHeight="36.0" prefWidth="52.0" style="-fx-background-color: gray; -fx-text-fill: white;" text="Quit" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Button onAction="#onNextButtonClick" prefHeight="38.0" prefWidth="114.0" style="-fx-background-color: #533B7C; -fx-text-fill: white;" text="Next Question" />
+        </HBox>
+    </children>
 </AnchorPane>

@@ -14,6 +14,7 @@ public class App extends Application {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("views/home.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 900, 500);
+            scene.getStylesheets().add(App.class.getResource("styles.css").toExternalForm());
             stage.setTitle("Quiz Game - Home");
             stage.setScene(scene);
             stage.show();

@@ -3,7 +3,6 @@ package quizgame.quizgame.utils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
@@ -19,10 +18,10 @@ import java.io.IOException;
 
 public class DBUtil {
     public static void changeScene(ActionEvent event, String fxmlFile, String title, String email, String name) {
+        FXMLLoader loader = new FXMLLoader(App.class.getResource("views/" + fxmlFile));
         try {
-            FXMLLoader loader = new FXMLLoader(App.class.getResource("views/" + fxmlFile));
-            Parent root = loader.load();
-            
+            Scene scene = new Scene(loader.load(), 900, 500);
+            scene.getStylesheets().add(App.class.getResource("styles.css").toExternalForm());
             if (email != null && name != null) {
                 ProfileController profileController = loader.getController();
                 if (profileController != null) {
@@ -32,7 +31,7 @@ public class DBUtil {
             
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setTitle(title);
-            stage.setScene(new Scene(root, 900, 500));
+            stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();

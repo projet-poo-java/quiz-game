@@ -1,6 +1,7 @@
 module quizgame.quizgame {
     requires transitive javafx.controls;
     requires javafx.fxml;
+    requires transitive java.sql;
 
     opens quizgame.quizgame to javafx.fxml;
     exports quizgame.quizgame;

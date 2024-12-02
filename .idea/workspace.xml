@@ -5,16 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5bff20f-5a0c-432a-a740-fb4237159312" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quizgame.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/controllers/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/controllers/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/controllers/ProfileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/controllers/RegisterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/utils/DBUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/utils/DatabaseConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Form-control.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/fireworks.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/register.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/views/home.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/views/login.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/views/profile.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/views/register.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/controllers/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/controllers/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/controllers/QuizPageControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/controllers/QuizPageControler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/42828.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Test Me.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Vector.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/download.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/views/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/views/hello-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/views/quiz_page-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/views/quiz_page-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/views/result-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/views/result-view.fxml" afterDir="false" />
@@ -54,28 +68,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App.executor": "Run",
-    "Application.HelloApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "amineBranch",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/dell/Documents/Ajava Project/quiz-game/src/main/resources/quizgame/quizgame/views/quiz_page-view.fxml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Merging amineBranch&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dell/Documents/Ajava Project/quiz-game/src/main/resources/quizgame/quizgame/views/quiz_page-view.fxml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\dell\Documents\Ajava Project\quiz-game\src\main\resources\images" />
@@ -126,7 +146,9 @@
       <workItem from="1732430806093" duration="1762000" />
       <workItem from="1732625287818" duration="612000" />
       <workItem from="1732630849177" duration="7245000" />
-      <workItem from="1732705956009" duration="1515000" />
+      <workItem from="1732705956009" duration="4430000" />
+      <workItem from="1732866652144" duration="7275000" />
+      <workItem from="1733051696100" duration="826000" />
     </task>
     <servers />
   </component>

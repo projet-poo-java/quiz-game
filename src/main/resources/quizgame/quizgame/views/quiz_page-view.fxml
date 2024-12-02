@@ -6,75 +6,64 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizgame.quizgame.controllers.QuizPageControler">
-
-    <!-- Background Image -->
+<AnchorPane prefHeight="602.0" prefWidth="799.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizgame.quizgame.controllers.QuizPageControler">
     <children>
-        <ImageView fitHeight="600.0" fitWidth="800.0" preserveRatio="false">
+        <!-- Background Image -->
+        <ImageView fitHeight="600.0" fitWidth="800.0">
             <image>
-                <Image url="@/images/backfroundPurple.jpeg"/>
+                <Image url="@../../../images/purple_watercolour_background_corners.jpg" />
             </image>
         </ImageView>
-        <VBox AnchorPane.topAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" spacing="20" style="-fx-background-color: #533B7C; -fx-padding: 10;">
-            <HBox cacheShape="false" centerShape="false" spacing="20">
-                <Pane prefHeight="50.0" prefWidth="827.0" HBox.hgrow="ALWAYS">
-                    <children>
-                        <ImageView fitHeight="48.0" fitWidth="48.0">
-                            <image>
-                                <Image url="@../../../images/logo2.png" />
-                            </image>
-                        </ImageView>
-                        <ImageView fitHeight="21.0" fitWidth="82.0" layoutX="56.0" layoutY="15.0">
-                            <image>
-                                <Image url="@../../../images/testme.png" />
-                            </image>
-                        </ImageView>
-                        <Label layoutX="331.0" layoutY="3.0" prefHeight="45.0" prefWidth="172.0" style="-fx-font-size: 30; -fx-text-fill: white;" text="Quiz Game" textOverrun="CLIP">
-                            <font>
-                                <Font name="System Bold" size="30.0" />
-                            </font>
-                        </Label>
-                    </children>
-                </Pane>
-            </HBox>
-        </VBox>
-        <VBox AnchorPane.topAnchor="70.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" alignment="CENTER" spacing="20" style="-fx-padding: 60; -fx-background-color: white;">
-            <Label fx:id="categoryLabel" style="-fx-font-size: 18;" text="Category: General Knowledge" />
-            <ImageView fitHeight="74.0" fitWidth="74.0">
-                <image>
-                    <Image url="@../../../images/question-mark.png" />
-                </image>
-            </ImageView>
-            <Label fx:id="questionNumberLabel" style="-fx-font-size: 18;" text="Question 1/10" />
-            <Label fx:id="questionLabel" style="-fx-font-size: 20;" text="What is 2 + 2?" />
-            <VBox spacing="15" style="-fx-padding: 15;">
-                <HBox spacing="30" style="-fx-alignment: CENTER;">
-                    <VBox style="-fx-border-color: #533B7C; -fx-border-width: 2; -fx-padding: 10; -fx-background-color: #ecf0f1;">
-                        <RadioButton fx:id="choice1RadioButton" onAction="#onChoiceSelected" style="-fx-font-size: 16;" text="Choice 1 Description" />
-                    </VBox>
-                    <VBox style="-fx-border-color: #533B7C; -fx-border-width: 2; -fx-padding: 10; -fx-background-color: #ecf0f1;">
-                        <RadioButton fx:id="choice2RadioButton" onAction="#onChoiceSelected" style="-fx-font-size: 16;" text="Choice 2 Description" />
-                    </VBox>
-                </HBox>
-                <HBox spacing="30" style="-fx-alignment: CENTER;">
-                    <VBox style="-fx-border-color: #533B7C; -fx-border-width: 2; -fx-padding: 10; -fx-background-color: #ecf0f1;">
-                        <RadioButton fx:id="choice3RadioButton" onAction="#onChoiceSelected" style="-fx-font-size: 16;" text="Choice 3 Description" />
-                    </VBox>
-                    <VBox style="-fx-border-color: #533B7C; -fx-border-width: 2; -fx-padding: 10; -fx-background-color: #ecf0f1;">
-                        <RadioButton fx:id="choice4RadioButton" onAction="#onChoiceSelected" style="-fx-font-size: 16;" text="Choice 4 Description" />
-                    </VBox>
-                </HBox>
-            </VBox>
-        </VBox>
-        <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" alignment="CENTER" spacing="10" style="-fx-padding: 10;">
-            <Button onAction="#onQuitButtonClick" prefHeight="36.0" prefWidth="52.0" style="-fx-background-color: gray; -fx-text-fill: white;" text="Quit" />
-            <Pane HBox.hgrow="ALWAYS" />
-            <Button onAction="#onNextButtonClick" prefHeight="38.0" prefWidth="114.0" style="-fx-background-color: #533B7C; -fx-text-fill: white;" text="Next Question" />
-        </HBox>
+
+        <!-- Labels and Question -->
+        <Label fx:id="categoryLabel" layoutX="14.0" layoutY="82.0" style="-fx-font-size: 24; -fx-font-family: 'Cardo'; -fx-text-fill: #533B7C;" text="Category: General Knowledge" />
+        <Label fx:id="questionNumberLabel" layoutX="626.0" layoutY="89.0" style="-fx-font-size: 18; -fx-font-family: 'Cardo'; -fx-text-fill: #533B7C;" text="Question 1/10" />
+        <Label fx:id="questionLabel" layoutX="250.0" layoutY="197.0" prefWidth="300.0" style="-fx-font-size: 20; -fx-font-family: 'Georgia'; -fx-text-fill: #533B7C; -fx-alignment: CENTER;" text="What is 2 + 2?" />
+
+        <!-- Header Section -->
+        <Pane prefHeight="70.0" prefWidth="800.0" style="-fx-background-color: #533B7C;">
+            <children>
+                <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="10.0" layoutY="10.0">
+                    <image>
+                        <Image url="@../../../images/logo2.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="21.0" fitWidth="82.0" layoutX="70.0" layoutY="25.0">
+                    <image>
+                        <Image url="@../../../images/testme.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="324.0" layoutY="13.0" prefHeight="45.0" prefWidth="200.0" style="-fx-font-size: 30; -fx-text-fill: white; -fx-font-family: 'Arial Rounded MT Bold';" text="Quiz Game" />
+            </children>
+        </Pane>
+
+        <!-- Choices -->
+        <Pane layoutX="47.0" layoutY="158.0" prefHeight="286.0" prefWidth="704.0">
+            <children>
+                <RadioButton fx:id="choice1RadioButton" layoutX="48.0" layoutY="130.0" onAction="#onChoiceSelected" style="-fx-font-size: 16; -fx-font-family: 'Verdana';" text="Choice 1 Description" />
+                <RadioButton fx:id="choice2RadioButton" layoutX="397.0" layoutY="130.0" onAction="#onChoiceSelected" style="-fx-font-size: 16; -fx-font-family: 'Verdana';" text="Choice 2 Description" />
+                <RadioButton fx:id="choice3RadioButton" layoutX="42.0" layoutY="210.0" onAction="#onChoiceSelected" style="-fx-font-size: 16; -fx-font-family: 'Verdana';" text="Choice 3 Description" />
+                <RadioButton fx:id="choice4RadioButton" layoutX="397.0" layoutY="210.0" onAction="#onChoiceSelected" style="-fx-font-size: 16; -fx-font-family: 'Verdana';" text="Choice 4 Description" />
+            </children>
+        </Pane>
+
+        <!-- Question Mark Icon -->
+        <ImageView fitHeight="74.0" fitWidth="74.0" layoutX="363.0" layoutY="444.0">
+            <image>
+                <Image url="@../../../images/curiosity.png" />
+            </image>
+        </ImageView>
+
+              <!-- Footer Section -->
+        <Pane layoutY="552.0" prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #F1F1F1;">
+            <children>
+                <Button layoutX="21.0" layoutY="8.0" onAction="#onQuitButtonClick" prefHeight="35.0" prefWidth="63.0" style="-fx-background-color: gray; -fx-text-fill: white;" text="Quit" />
+                <Button layoutX="659.0" layoutY="7.0" onAction="#onNextButtonClick" prefHeight="36.0" prefWidth="106.0" style="-fx-background-color: #533B7C; -fx-text-fill: white;" text="Next Question" />
+            </children>
+
+
+        </Pane>
     </children>
 </AnchorPane>

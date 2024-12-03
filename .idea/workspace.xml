@@ -5,28 +5,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5bff20f-5a0c-432a-a740-fb4237159312" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/hello-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a22f94c4-c52d-4edd-a150-2ce35acfdaf4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a22f94c4-c52d-4edd-a150-2ce35acfdaf4/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a22f94c4-c52d-4edd-a150-2ce35acfdaf4/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a22f94c4-c52d-4edd-a150-2ce35acfdaf4/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a22f94c4-c52d-4edd-a150-2ce35acfdaf4/storage_v2/_src_/schema/quizgame.xzuywQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/controllers/StartQuizController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/controllers/UserDashboardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/coding1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/design1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/home-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/menus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/motion-graphics1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/ranking.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/ranking1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/score.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/score1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/seo 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/start.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/start1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/web-design1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/views/StartQuiz.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/views/userdashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quizgame.sql" beforeDir="false" afterPath="$PROJECT_DIR$/quizgame.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/home.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/home.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ahmedazagaz&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/projet-poo-java/quiz-game.git&quot;,
+    &quot;accountId&quot;: &quot;f58b5ddd-64f9-4b22-8ce4-189b45863376&quot;
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -34,9 +72,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2otQtthkqJYpywNY28JgMLgkeZE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -45,10 +83,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.App.executor": "Run",
     "Application.HelloApplication.executor": "Run",
+    "Database Script.quizgame.sql.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Ahmed",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/LENOVO/IdeaProjects/quiz-game/src/main/resources/quizgame/quizgame/assets",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -57,15 +101,28 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
+    "settings.editor.selected.configurable": "database.query.execution",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ],
+    "RunConfigurationTargetLRU": [
+      "a22f94c4-c52d-4edd-a150-2ce35acfdaf4"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\LENOVO\IdeaProjects\quiz-game\src\main\resources\quizgame\quizgame\assets" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
       </set>
     </attachedChunks>
   </component>
@@ -78,6 +135,13 @@
       <option name="presentableId" value="Default" />
       <updated>1731686615684</updated>
       <workItem from="1731686616891" duration="473000" />
+      <workItem from="1732706804225" duration="3465000" />
+      <workItem from="1732839736800" duration="1099000" />
+      <workItem from="1732873140938" duration="9687000" />
+      <workItem from="1732910331312" duration="11618000" />
+      <workItem from="1732969688706" duration="2416000" />
+      <workItem from="1732981928169" duration="5791000" />
+      <workItem from="1733241207013" duration="2248000" />
     </task>
     <servers />
   </component>

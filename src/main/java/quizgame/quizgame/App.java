@@ -12,7 +12,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("views/home.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("views/userdashboard.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 900, 500);
             scene.getStylesheets().add(App.class.getResource("styles.css").toExternalForm());
             stage.setTitle("Quiz Game - Home");

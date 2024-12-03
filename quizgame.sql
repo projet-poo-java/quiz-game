@@ -17,56 +17,47 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Database: `quizgame`
+
+-- Table structure for table users
 --
 
--- --------------------------------------------------------
+CREATE TABLE users (
+                       id int NOT NULL primary key ,
+                       name varchar(50) NOT NULL,
+                       email varchar(50) NOT NULL,
+                       password varchar(64)  NOT NULL
+);
 
---
--- Table structure for table `users`
---
 
-CREATE TABLE `users` (
-  `id` int NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `password` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `name`, `email`, `password`) VALUES
-(1, '', '', ''),
-(2, 'ando', 'abdo@gmail.com', '12345678'),
-(3, 'gggg', 'gggg', 'gggg'),
-(4, 'aa', 'aa', 'aa'),
-(5, 'aaaa', 'aaaa', '61be55a8e2f6b4e172338bddf184d6dbee29c98853e0a0485ecee7f27b9af0b4'),
-(6, 'qqq', 'qqq', 'a95bc16631ae2b6fadb455ee018da0adc2703e56d89e3eed074ce56d2f7b1b6a'),
-(7, 'qw', 'qw', 'd876d59095f13054c120f77202c5378aa25d7787d4adf70980dbb3f2a7125ac1'),
-(8, 'gg', 'gg', 'cbd3cfb9b9f51bbbfbf08759e243f5b3519cbf6ecc219ee95fe7c667e32c0a8d');
+INSERT INTO users (id, name, email, password) VALUES
+                                                  (1, '', '', ''),
+                                                  (2, 'ando', 'abdo@gmail.com', '12345678'),
+                                                  (3, 'gggg', 'gggg', 'gggg'),
+                                                  (4, 'aa', 'aa', 'aa'),
+                                                  (5, 'aaaa', 'aaaa', '61be55a8e2f6b4e172338bddf184d6dbee29c98853e0a0485ecee7f27b9af0b4'),
+                                                  (6, 'qqq', 'qqq', 'a95bc16631ae2b6fadb455ee018da0adc2703e56d89e3eed074ce56d2f7b1b6a'),
+                                                  (7, 'qw', 'qw', 'd876d59095f13054c120f77202c5378aa25d7787d4adf70980dbb3f2a7125ac1'),
+                                                  (8, 'gg', 'gg', 'cbd3cfb9b9f51bbbfbf08759e243f5b3519cbf6ecc219ee95fe7c667e32c0a8d');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `users`
+-- Indexes for table users
 --
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE users
+    ADD PRIMARY KEY (id);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT for table users
 --
-ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+ALTER TABLE users
+    MODIFY id int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,4 +1,5 @@
 package quizgame.quizgame.controllers;
 
-public class ResultView {
+public class ResultViewController {
+    
 }

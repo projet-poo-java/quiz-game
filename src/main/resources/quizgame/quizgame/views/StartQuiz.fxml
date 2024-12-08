@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: white;" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizgame.quizgame.controllers.StartQuizController">
+    <children>
+        <Text layoutX="270.0" layoutY="59.0" style="-fx-font-size: 16px;" text="Choose a category and set up your quiz!">
+         <font>
+            <Font size="17.0" />
+         </font></Text>
+        <Button layoutX="237.0" layoutY="95.0" prefHeight="61.0" prefWidth="100.0" style="-fx-background-color: #BFFFCB;" text="Motion Graphic" />
+        <Button layoutX="378.0" layoutY="95.0" prefHeight="61.0" prefWidth="100.0" style="-fx-background-color: #D6D6D6;" text="Web Development">
+            <font>
+                <Font size="10.0" />
+            </font></Button>
+        <Button layoutX="515.0" layoutY="95.0" prefHeight="61.0" prefWidth="100.0" style="-fx-background-color: #F7C5BA;" text="UX Design" />
+        <Button layoutX="650.0" layoutY="95.0" prefHeight="61.0" prefWidth="100.0" style="-fx-background-color: #A7A6BB;" text="SEO Optimize" />
+
+        <!-- Quiz Setup -->
+        <Text layoutX="157.0" layoutY="271.0" text="Number of Questions:" />
+        <TextField fx:id="numberOfQuestionsField" layoutX="287.0" layoutY="254.0" prefHeight="25.0" prefWidth="54.0" />
+
+        <Text layoutX="158.0" layoutY="325.0" text="Select Difficulty:" />
+        <ComboBox fx:id="difficultyComboBox" layoutX="158.0" layoutY="353.0" prefHeight="25.0" prefWidth="127.0" promptText="Any Difficulty">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Easy" />
+                    <String fx:value="Medium" />
+                    <String fx:value="Hard" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <Button fx:id="startQuizButton" layoutX="602.0" layoutY="254.0" prefHeight="25.0" prefWidth="54.0" style="-fx-background-color: #533B7C;" text="Join" textFill="WHITE" />
+        <Button layoutX="100.0" layoutY="95.0" prefHeight="61.0" prefWidth="100.0" style="-fx-background-color: #64DFEA;" text="Web Design" />
+        <Text layoutX="378.0" layoutY="272.0" text="Or Join  a private one " />
+        <TextField fx:id="numberOfQuestionsField1" layoutX="515.0" layoutY="254.0" prefHeight="25.0" prefWidth="65.0" />
+    </children>
+</AnchorPane>

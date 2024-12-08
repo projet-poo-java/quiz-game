@@ -4,8 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5bff20f-5a0c-432a-a740-fb4237159312" name="Changes" comment="test">
+    <list default="true" id="d5bff20f-5a0c-432a-a740-fb4237159312" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a22f94c4-c52d-4edd-a150-2ce35acfdaf4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a22f94c4-c52d-4edd-a150-2ce35acfdaf4/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a22f94c4-c52d-4edd-a150-2ce35acfdaf4/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a22f94c4-c52d-4edd-a150-2ce35acfdaf4/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a22f94c4-c52d-4edd-a150-2ce35acfdaf4/storage_v2/_src_/schema/quizgame.xzuywQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/controllers/StartQuizController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/controllers/UserDashboardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/coding1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/design1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/home-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/menus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/motion-graphics1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/ranking.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/ranking1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/score.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/score1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/seo 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/start.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/start1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/web-design1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/views/StartQuiz.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/views/userdashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quizgame.sql" beforeDir="false" afterPath="$PROJECT_DIR$/quizgame.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/quizgame/quizgame/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/home.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/assets/home.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/quizgame/quizgame/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,15 +53,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ahmedazagaz&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/projet-poo-java/quiz-game.git&quot;,
+    &quot;accountId&quot;: &quot;f58b5ddd-64f9-4b22-8ce4-189b45863376&quot;
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
       </MavenGeneralSettings>
     </option>
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -42,59 +81,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.App.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;TASK&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dell/Documents/Ajava Project/quiz-game/src/main/resources/quizgame/quizgame/views/quiz_page-view.fxml&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Application.HelloApplication.executor": "Run",
+    "Database Script.quizgame.sql.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Ahmed",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/LENOVO/IdeaProjects/quiz-game/src/main/resources/quizgame/quizgame/assets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "database.query.execution",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ],
+    "RunConfigurationTargetLRU": [
+      "a22f94c4-c52d-4edd-a150-2ce35acfdaf4"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\dell\Documents\Ajava Project\quiz-game\src\main\resources\images" />
-      <recent name="C:\Users\dell\Documents\Ajava Project\quiz-game\src\main\resources\quizgame\quizgame\views" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\LENOVO\IdeaProjects\quiz-game\src\main\resources\quizgame\quizgame\assets" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="quizgame.quizgame.App" />
-      <module name="quiz-game" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="quizgame.quizgame.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.App" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -113,26 +135,13 @@
       <option name="presentableId" value="Default" />
       <updated>1731686615684</updated>
       <workItem from="1731686616891" duration="473000" />
-      <workItem from="1732232139840" duration="4923000" />
-      <workItem from="1732318146240" duration="11432000" />
-      <workItem from="1732401569477" duration="12066000" />
-      <workItem from="1732430178402" duration="566000" />
-      <workItem from="1732430806093" duration="1762000" />
-      <workItem from="1732625287818" duration="612000" />
-      <workItem from="1732630849177" duration="7245000" />
-      <workItem from="1732705956009" duration="4430000" />
-      <workItem from="1732866652144" duration="7275000" />
-      <workItem from="1733051696100" duration="826000" />
-      <workItem from="1733155758883" duration="3379000" />
-      <workItem from="1733169101639" duration="3686000" />
-    </task>
-    <task id="LOCAL-00001" summary="test">
-      <option name="closed" value="true" />
-      <created>1733157736167</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1733157736167</updated>
+      <workItem from="1732706804225" duration="3465000" />
+      <workItem from="1732839736800" duration="1099000" />
+      <workItem from="1732873140938" duration="9687000" />
+      <workItem from="1732910331312" duration="11618000" />
+      <workItem from="1732969688706" duration="2416000" />
+      <workItem from="1732981928169" duration="5791000" />
+      <workItem from="1733241207013" duration="2248000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />

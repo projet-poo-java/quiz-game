@@ -16,7 +16,7 @@
                <children>
                   <ImageView fitHeight="457.0" fitWidth="476.0" layoutX="-13.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="-13.0" AnchorPane.rightAnchor="13.83428955078125" AnchorPane.topAnchor="29.0">
                      <image>
-                        <Image url="@../assets/login.png" />
+                        <Image url="@../assets/images/login.png" />
                      </image>
                   </ImageView>
                </children></AnchorPane>
@@ -24,22 +24,22 @@
                <children>
                   <ImageView fitHeight="103.0" fitWidth="234.0" layoutX="112.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="362.0077896118164" AnchorPane.leftAnchor="112.0" AnchorPane.rightAnchor="103.0" AnchorPane.topAnchor="45.0">
                      <image>
-                        <Image url="@../assets/logo.png" />
+                        <Image url="@../assets/images/logo.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="64.0" layoutY="148.0" prefHeight="80.0" prefWidth="321.0" text="Welcome to QuizMaster: Your Ultimate Brain Challenge! 🎮" textAlignment="CENTER" textFill="#533b7c" wrapText="true" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="148.0">
                      <font>
-                        <Font name="JetBrainsMono NF Bold" size="18.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
                   <Button fx:id="getStartedBtn" layoutX="123.0" layoutY="375.0" mnemonicParsing="false" onAction="#goToLogin" prefHeight="42.0" prefWidth="212.0" style="-fx-background-color: #533B7C;" text="Get Started" textFill="WHITE" AnchorPane.leftAnchor="123.0" AnchorPane.rightAnchor="114.0" AnchorPane.topAnchor="375.0">
                      <font>
-                        <Font name="JetBrainsMono NF Bold" size="16.0" />
+                        <Font size="16.0" />
                      </font>
                   </Button>
                   <Label layoutX="74.0" layoutY="243.0" prefHeight="80.0" prefWidth="321.0" text="Are you ready to test your knowledge and sharpen your skills?" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="243.0">
                      <font>
-                        <Font name="JetBrainsMono NF Regular" size="16.0" />
+                        <Font size="16.0" />
                      </font>
                   </Label>
                </children></AnchorPane>

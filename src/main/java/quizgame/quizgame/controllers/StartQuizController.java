@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import quizgame.quizgame.App;
 
 public class StartQuizController {
     @FXML private Button booksButton;
@@ -53,7 +54,7 @@ public class StartQuizController {
         }
         
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/quizgame/quizgame/views/quizView.fxml"));
+            FXMLLoader loader = new FXMLLoader(App.class.getResource("views/quizView.fxml"));
             Parent root = loader.load();
             
             QuizViewController controller = loader.getController();

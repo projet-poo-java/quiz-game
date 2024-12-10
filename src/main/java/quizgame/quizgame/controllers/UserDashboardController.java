@@ -12,6 +12,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import quizgame.quizgame.utils.DBUtil;
+import quizgame.quizgame.App;
 
 import java.io.IOException;
 public class UserDashboardController {
@@ -36,8 +37,6 @@ public class UserDashboardController {
 
 
     private boolean isMenuVisible = false;
-
-    private Button startQuizInterfaceButton;
 
     @FXML
     private Button logoutBtn;
@@ -81,7 +80,7 @@ public class UserDashboardController {
     private void openStartQuizInterface() {
         try {
             // Load the Start Quiz interface
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/quizgame/quizgame/views/StartQuiz.fxml"));
+            FXMLLoader loader = new FXMLLoader(App.class.getResource("views/StartQuiz.fxml"));
             Parent root = loader.load();
 
             // Create a new stage and display it
@@ -89,8 +88,6 @@ public class UserDashboardController {
             stage.setScene(new Scene(root));
             stage.setTitle("Start Quiz");
             stage.show();
-            // Show the "Start Quiz interface" button
-            startQuizInterfaceButton.setVisible(true);
         } catch (IOException e) {
             e.printStackTrace();
         }

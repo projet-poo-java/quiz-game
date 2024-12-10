@@ -12,13 +12,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: white;" stylesheets="@../assets/css/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizgame.quizgame.controllers.StartQuizController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizgame.quizgame.controllers.StartQuizController">
     <children>
       <HBox alignment="CENTER" prefHeight="59.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
          <children>
               <Text style="-fx-font-size: 16px;" text="Choose a category and set up your quiz!">
                <font>
-                  <Font name="JetBrainsMono NF Regular" size="18.0" />
+                  <Font size="18.0" />
                </font>
             </Text>
          </children>
@@ -27,7 +27,7 @@
          <children>
               <Button fx:id="historyButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" style="-fx-background-color: #FDB614;" text="History">
                <font>
-                  <Font name="JetBrainsMono NF Regular" size="13.0" />
+                  <Font size="13.0" />
                </font>
             </Button>
               <Button fx:id="mathButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" style="-fx-background-color: #F7C5BA;" text="Mathematics">
@@ -35,7 +35,7 @@
                   <Insets left="50.0" />
                </HBox.margin>
                <font>
-                  <Font name="JetBrainsMono NF Regular" size="13.0" />
+                  <Font size="13.0" />
                </font>
             </Button>
               <Button fx:id="computersButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" style="-fx-background-color: #A7A6BB;" text="Computers">
@@ -43,7 +43,7 @@
                   <Insets left="50.0" />
                </HBox.margin>
                <font>
-                  <Font name="JetBrainsMono NF Regular" size="13.0" />
+                  <Font size="13.0" />
                </font>
             </Button>
               <Button fx:id="booksButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" style="-fx-background-color: #64DFEA;" text="Books">
@@ -51,7 +51,7 @@
                   <Insets left="50.0" />
                </HBox.margin>
                <font>
-                  <Font name="JetBrainsMono NF Regular" size="13.0" />
+                  <Font size="13.0" />
                </font>
             </Button>
               <Button fx:id="natureButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" style="-fx-background-color: #BFFFCB;" text="Nature">
@@ -59,7 +59,7 @@
                   <Insets left="50.0" />
                </HBox.margin>
                <font>
-                  <Font name="JetBrainsMono NF Regular" size="13.0" />
+                  <Font size="13.0" />
                </font>
             </Button>
          </children>
@@ -70,7 +70,7 @@
               <!-- Quiz Setup -->
               <Text text="Number of Questions:">
                <font>
-                  <Font name="JetBrainsMono NF Regular" size="12.0" />
+                  <Font size="12.0" />
                </font>
             </Text>
               <TextField fx:id="numberOfQuestionsField" prefHeight="25.0" prefWidth="100.0" promptText="N° of questions" text="10">
@@ -78,7 +78,7 @@
                   <Insets left="15.0" />
                </HBox.margin>
                <font>
-                  <Font name="JetBrainsMono NF Regular" size="12.0" />
+                  <Font size="12.0" />
                </font>
             </TextField>
       
@@ -87,7 +87,7 @@
                   <Insets left="15.0" />
                </HBox.margin>
                <font>
-                  <Font name="JetBrainsMono NF Regular" size="12.0" />
+                  <Font size="12.0" />
                </font>
             </Text>
               <ComboBox fx:id="difficultyComboBox" prefHeight="25.0" prefWidth="100.0" promptText="Easy">
@@ -107,7 +107,7 @@
                   <Insets left="15.0" />
                </HBox.margin>
                <font>
-                  <Font name="JetBrainsMono NF Regular" size="12.0" />
+                  <Font size="12.0" />
                </font>
             </Text>
             <TextField fx:id="timerField" layoutX="339.0" layoutY="27.0" prefHeight="25.0" prefWidth="100.0" promptText="timer" text="10">
@@ -115,7 +115,7 @@
                   <Insets left="15.0" />
                </HBox.margin>
                <font>
-                  <Font name="JetBrainsMono NF Regular" size="12.0" />
+                  <Font size="12.0" />
                </font>
             </TextField>
          </children>
@@ -124,7 +124,7 @@
          <children>
             <Text style="-fx-font-size: 16px;" text="Choose a category and set up your quiz!">
                <font>
-                  <Font name="JetBrainsMono NF Regular" size="18.0" />
+                  <Font size="18.0" />
                </font>
             </Text>
          </children>
@@ -135,7 +135,7 @@
                <children>
                   <TextField prefHeight="33.0" prefWidth="300.0" promptText="Enter invitation code">
                      <font>
-                        <Font name="JetBrainsMono NF Regular" size="13.0" />
+                        <Font size="13.0" />
                      </font>
                   </TextField>
             
@@ -144,7 +144,7 @@
                         <Insets top="20.0" />
                      </VBox.margin>
                      <font>
-                        <Font name="JetBrainsMono NF Regular" size="13.0" />
+                        <Font size="13.0" />
                      </font>
                   </Button>
                </children>

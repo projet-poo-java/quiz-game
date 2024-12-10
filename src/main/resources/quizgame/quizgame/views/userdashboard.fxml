@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="700.0" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizgame.quizgame.controllers.UserDashboardController">
+<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizgame.quizgame.controllers.UserDashboardController">
    <children>
       
       <BorderPane layoutX="-2.0" layoutY="-2.0" prefHeight="406.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -49,7 +49,7 @@
                         </Button>
                         <Button fx:id="logoutBtn" mnemonicParsing="false" prefHeight="38.0" prefWidth="117.0" style="-fx-background-color: WHITE;" styleClass="menuItem" text="Logout" textFill="RED">
                            <font>
-                              <Font name="System Bold" size="12.0" />
+                              <Font size="12.0" />
                            </font>
                         </Button>
                      </children>
@@ -63,7 +63,7 @@
                         </ImageView>
                      </graphic>
                      <font>
-                        <Font name="System Bold" size="14.0" />
+                        <Font size="14.0" />
                      </font>
                   </Label>
                   <Label fx:id="MenuBack" layoutX="21.0" layoutY="34.0" prefHeight="21.0" prefWidth="85.0" text="MENU" textAlignment="CENTER" textFill="#c2c2c2" AnchorPane.bottomAnchor="7.333333333333332" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="600.0" AnchorPane.topAnchor="36.0">
@@ -75,7 +75,7 @@
                         </ImageView>
                      </graphic>
                      <font>
-                        <Font name="System Bold" size="14.0" />
+                        <Font size="14.0" />
                      </font>
                   </Label>
                </children>
@@ -88,7 +88,7 @@
                      <children>
                         <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: #533B7C;" styleClass="sidebarItem" text="Dashboard" textFill="WHITE">
                            <font>
-                              <Font name="System Bold" size="15.0" />
+                              <Font size="15.0" />
                            </font>
                            <graphic>
                               <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
@@ -99,7 +99,7 @@
                         </Button>
                         <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: #533B7C;" styleClass="sidebarItem" text="Start Quiz" textFill="WHITE">
                            <font>
-                              <Font name="System Bold" size="15.0" />
+                              <Font size="15.0" />
                            </font>
                            <graphic>
                               <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
@@ -111,7 +111,7 @@
                         </Button>
                         <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: #533B7C;" styleClass="sidebarItem" text="Score" textFill="WHITE">
                            <font>
-                              <Font name="System Bold" size="15.0" />
+                              <Font size="15.0" />
                            </font>
                            <graphic>
                               <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
@@ -122,7 +122,7 @@
                         </Button>
                         <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: #533B7C;" styleClass="sidebarItem" text="Rank" textFill="WHITE">
                            <font>
-                              <Font name="System Bold" size="15.0" />
+                              <Font size="15.0" />
                            </font>
                            <graphic>
                               <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">

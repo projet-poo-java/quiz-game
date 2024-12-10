@@ -1,18 +1,51 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-ExtraBold.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-Regular.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-SemiBold.ttf");
+  font-weight: 600;
+}
 
+* {
+  -fx-font-family: "OpenSans", Calibri, "Trebuchet MS",sans-serif;
+}
 
 .menuItem:hover {
-    -fx-border-color: #660099;
-    -fx-border-width: 0px 0px 3px 0px;
+  -fx-border-color: #660099;
+  -fx-border-width: 0px 0px 3px 0px;
 }
 
 .sidebarItem:hover {
-    -fx-background-color: #146886;
-    -fx-border-color: white;
-    -fx-border-width: 0px 0px 0px 3px;
+  -fx-background-color: #146886;
+  -fx-border-color: white;
+  -fx-border-width: 0px 0px 0px 3px;
 }
 
-.bgImg{
-    -fx-background-image: url('images/purple_watercolour_background_corners.jpg');
-    -fx-background-size: cover;
-    -fx-background-position: center;
+.bgImg {
+  -fx-background-image: url("images/purple_watercolour_background_corners.jpg");
+  -fx-background-size: cover;
+  -fx-background-position: center;
 }

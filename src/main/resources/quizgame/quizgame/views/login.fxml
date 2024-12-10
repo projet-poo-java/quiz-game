@@ -19,7 +19,7 @@
                <children>
                   <ImageView fitHeight="457.0" fitWidth="476.0" layoutX="-13.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="-13.0" AnchorPane.rightAnchor="13.83428955078125" AnchorPane.topAnchor="29.0">
                      <image>
-                        <Image url="@../assets/login.png" />
+                        <Image url="@../assets/images/login.png" />
                      </image>
                   </ImageView>
                </children></AnchorPane>
@@ -27,44 +27,44 @@
                <children>
                   <ImageView fitHeight="103.0" fitWidth="234.0" layoutX="112.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="390.0077896118164" AnchorPane.leftAnchor="112.0" AnchorPane.rightAnchor="103.0" AnchorPane.topAnchor="18.0">
                      <image>
-                        <Image url="@../assets/logo.png" />
+                        <Image url="@../assets/images/logo.png" />
                      </image>
                   </ImageView>
                   <TextField fx:id="emailInput" layoutX="82.0" layoutY="202.0" prefHeight="42.0" prefWidth="312.0" promptText="Email or username *" />
                   <Label layoutX="115.0" layoutY="136.0" text="Welcome Back! Ready to Play?" textFill="#533b7c" AnchorPane.bottomAnchor="345.0" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="98.0" AnchorPane.topAnchor="136.0">
                      <font>
-                        <Font name="JetBrainsMono NF Bold" size="14.0" />
+                        <Font size="14.0" />
                      </font>
                   </Label>
                   <Label layoutX="84.0" layoutY="175.0" text="Email or username *" textFill="#696f79">
                      <font>
-                        <Font name="JetBrainsMono NF Bold" size="14.0" />
+                        <Font size="14.0" />
                      </font>
                   </Label>
                   <Label layoutX="83.0" layoutY="268.0" text="Password *" textFill="#696f79">
                      <font>
-                        <Font name="JetBrainsMono NF Bold" size="14.0" />
+                        <Font size="14.0" />
                      </font>
                   </Label>
                   <PasswordField fx:id="passwordInput" layoutX="81.0" layoutY="293.0" prefHeight="42.0" prefWidth="312.0" promptText="Password *" />
                   <Button fx:id="loginBtn" layoutX="81.0" layoutY="370.0" mnemonicParsing="false" onAction="#login" prefHeight="42.0" prefWidth="113.0" style="-fx-background-color: #533B7C;" text="Login" textFill="WHITE">
                      <font>
-                        <Font name="JetBrainsMono NF Bold" size="14.0" />
+                        <Font size="14.0" />
                      </font>
                   </Button>
                   <Hyperlink layoutX="241.0" layoutY="378.0" text="Forgot password ?" textFill="#4aaacc">
                      <font>
-                        <Font name="JetBrainsMono NF Regular" size="14.0" />
+                        <Font size="14.0" />
                      </font>
                   </Hyperlink>
                   <Label layoutX="81.0" layoutY="437.0" text="You don't have an account ?" textFill="#696f79">
                      <font>
-                        <Font name="JetBrainsMono NF Regular" size="13.0" />
+                        <Font size="13.0" />
                      </font>
                   </Label>
                   <Hyperlink fx:id="goToRegisterBtn" layoutX="296.0" layoutY="433.0" text="Register" textFill="#533b7c" onAction="#goToRegister">
                      <font>
-                        <Font name="JetBrainsMono NF Regular" size="14.0" />
+                        <Font size="14.0" />
                      </font>
                   </Hyperlink>
                </children></AnchorPane>

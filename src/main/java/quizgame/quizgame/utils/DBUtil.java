@@ -20,10 +20,9 @@ import java.io.IOException;
 public class DBUtil {
     public static void changeScene(ActionEvent event, String fxmlFile, String title, String email, String name) {
         try {
-            FXMLLoader loader = new FXMLLoader(App.class.getResource("/quizgame/quizgame/views/" + fxmlFile));
+            FXMLLoader loader = new FXMLLoader(App.class.getResource("views/" + fxmlFile));
             Parent root = loader.load();
             Scene scene = new Scene(root, 900, 500);
-            scene.getStylesheets().add(App.class.getResource("/quizgame/quizgame/assets/css/styles.css").toExternalForm());
             if (email != null && name != null) {
                 UserDashboardController UserDashboardController = loader.getController();
                 if (UserDashboardController != null) {

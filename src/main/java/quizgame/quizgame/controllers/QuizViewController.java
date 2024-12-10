@@ -14,6 +14,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import com.google.gson.Gson;
 import javafx.scene.Scene;
+import quizgame.quizgame.App;
 
 public class QuizViewController {
     @FXML private Label categoryLabel;
@@ -173,7 +174,7 @@ public class QuizViewController {
 
     private void showResults() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/quizgame/quizgame/views/ResultView.fxml"));
+            FXMLLoader loader = new FXMLLoader(App.class.getResource("views/ResultView.fxml"));
             Parent root = loader.load();
             
             ResultViewController controller = loader.getController();
@@ -193,7 +194,7 @@ public class QuizViewController {
     @FXML
     protected void onQuitButtonClick() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/quizgame/quizgame/views/StartQuiz.fxml"));
+            FXMLLoader loader = new FXMLLoader(App.class.getResource("views/StartQuiz.fxml"));
             Scene scene = new Scene(loader.load());
             Stage stage = (Stage) questionLabel.getScene().getWindow();
             stage.setScene(scene);

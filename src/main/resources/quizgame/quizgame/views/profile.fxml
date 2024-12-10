@@ -10,12 +10,12 @@
    <children>
       <Label fx:id="welcomeText" text="Welcome" textFill="#533b7c">
          <font>
-            <Font name="JetBrainsMono NF Bold" size="24.0" />
+            <Font size="24.0" />
          </font>
       </Label>
       <Button fx:id="logoutBtn" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #533B7C;" text="Logout" textFill="WHITE">
          <font>
-            <Font name="JetBrainsMono NF Bold" size="24.0" />
+            <Font size="24.0" />
          </font>
       </Button>
    </children>

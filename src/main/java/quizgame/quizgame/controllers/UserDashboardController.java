@@ -1,6 +1,7 @@
 package quizgame.quizgame.controllers;
 
 import javafx.animation.TranslateTransition;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import quizgame.quizgame.utils.DBUtil;
 
 import java.io.IOException;
 public class UserDashboardController {
@@ -32,15 +34,16 @@ public class UserDashboardController {
     @FXML
     private Button scoreButton;
 
-    @FXML
-    private Button rankButton;
 
     private boolean isMenuVisible = false;
 
-    private Button startQuizInterfaceButton; // Bouton Start Quiz interface
-
+    private Button startQuizInterfaceButton;
 
     @FXML
+    private Button logoutBtn;
+    @FXML
+    private Label welcomeText;
+
     public void initialize() {
         // Initial state: Slider is hidden
         slider.setTranslateX(-200);
@@ -53,7 +56,9 @@ public class UserDashboardController {
         startQuizButton.setOnAction(event -> openStartQuizInterface());
         dashboardButton.setOnAction(event -> showDashboard());
         scoreButton.setOnAction(event -> showScore());
-        rankButton.setOnAction(event -> showRank());
+        logoutBtn.setOnAction((ActionEvent event) -> {
+            DBUtil.changeScene(event, "login.fxml", "Log In!", null, null);
+        });
     }
 
     private void toggleMenu() {
@@ -101,8 +106,8 @@ public class UserDashboardController {
         System.out.println("Score button clicked!");
     }
 
-    private void showRank() {
-        // Logic to handle the Rank button click (e.g., show Rank UI)
-        System.out.println("Rank button clicked!");
+
+    public void setUserInfo(String email, String name) {
+        welcomeText.setText("Welcome to quiz game " + name + ", " + email);
     }
 }

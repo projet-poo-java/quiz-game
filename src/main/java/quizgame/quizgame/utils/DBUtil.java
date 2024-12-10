@@ -3,11 +3,12 @@ package quizgame.quizgame.utils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import quizgame.quizgame.App;
-import quizgame.quizgame.controllers.ProfileController;
+import quizgame.quizgame.controllers.UserDashboardController;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,14 +19,15 @@ import java.io.IOException;
 
 public class DBUtil {
     public static void changeScene(ActionEvent event, String fxmlFile, String title, String email, String name) {
-        FXMLLoader loader = new FXMLLoader(App.class.getResource("views/" + fxmlFile));
         try {
-            Scene scene = new Scene(loader.load(), 900, 500);
-            scene.getStylesheets().add(App.class.getResource("styles.css").toExternalForm());
+            FXMLLoader loader = new FXMLLoader(App.class.getResource("/quizgame/quizgame/views/" + fxmlFile));
+            Parent root = loader.load();
+            Scene scene = new Scene(root, 900, 500);
+            scene.getStylesheets().add(App.class.getResource("/quizgame/quizgame/assets/css/styles.css").toExternalForm());
             if (email != null && name != null) {
-                ProfileController profileController = loader.getController();
-                if (profileController != null) {
-                    profileController.setUserInfo(email, name);
+                UserDashboardController UserDashboardController = loader.getController();
+                if (UserDashboardController != null) {
+                    UserDashboardController.setUserInfo(email, name);
                 }
             }
             
@@ -99,7 +101,7 @@ public class DBUtil {
                     fetchedEmail = resultSet.getString("email");
                     fetchedName = resultSet.getString("name");
                 }
-                changeScene(event, "profile.fxml", "Profile", fetchedEmail, fetchedName);
+                changeScene(event, "userdashboard.fxml", "Dashboard", fetchedEmail, fetchedName);
             }
         } catch (SQLException | NoSuchAlgorithmException e) {
             e.printStackTrace();

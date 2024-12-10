@@ -10,3 +10,9 @@
     -fx-border-color: white;
     -fx-border-width: 0px 0px 0px 3px;
 }
+
+.bgImg{
+    -fx-background-image: url('images/purple_watercolour_background_corners.jpg');
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}

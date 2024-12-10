@@ -47,13 +47,10 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="rankButton" mnemonicParsing="false" prefHeight="38.0" prefWidth="117.0" style="-fx-background-color: WHITE;" styleClass="menuItem" text="Rank">
-                           <graphic>
-                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../quizgame/assets/ranking1.png" />
-                                 </image></ImageView>
-                           </graphic>
+                        <Button fx:id="logoutBtn" mnemonicParsing="false" prefHeight="38.0" prefWidth="117.0" style="-fx-background-color: WHITE;" styleClass="menuItem" text="Logout" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
                         </Button>
                      </children>
                   </HBox>
@@ -143,6 +140,7 @@
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
                   <Button layoutX="59.0" layoutY="58.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="121.0" text="Start Quiz interface" />
+                  <Label fx:id="welcomeText" layoutX="59.0" layoutY="14.0" text="Welcome" />
                </children></AnchorPane>
          </center>
       </BorderPane>

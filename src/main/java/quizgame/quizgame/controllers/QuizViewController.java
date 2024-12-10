@@ -1,0 +1,214 @@
+package quizgame.quizgame.controllers;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+// import javafx.scene.text.Text;
+import java.util.*;
+import javafx.stage.Stage;
+import javafx.scene.Parent;
+import javafx.fxml.FXMLLoader;
+import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import com.google.gson.Gson;
+import javafx.scene.Scene;
+
+public class QuizViewController {
+    @FXML private Label categoryLabel;
+    @FXML private Label questionNumberLabel;
+    @FXML private Label questionLabel;
+    @FXML private RadioButton choice1RadioButton;
+    @FXML private RadioButton choice2RadioButton;
+    @FXML private RadioButton choice3RadioButton;
+    @FXML private RadioButton choice4RadioButton;
+    @FXML private Label timerLabel;
+
+    private List<QuizData.Result> questions;
+    private int currentQuestionIndex = 0;
+    private int score = 0;
+    private ToggleGroup answersGroup = new ToggleGroup();
+    private Timer quizTimer;
+    private int timeRemaining;
+
+    @FXML
+    public void initialize() {
+        choice1RadioButton.setToggleGroup(answersGroup);
+        choice2RadioButton.setToggleGroup(answersGroup);
+        choice3RadioButton.setToggleGroup(answersGroup);
+        choice4RadioButton.setToggleGroup(answersGroup);
+    }
+
+    public void initQuiz(String category, String categoryId, String numberOfQuestions, String difficulty, String timer) {
+        if (category == null) category = "General";
+        if (categoryId == null) categoryId = "9";
+        if (numberOfQuestions == null) numberOfQuestions = "10";
+        if (difficulty == null) difficulty = "easy";
+        if (timer == null) timer = "10";
+        
+        categoryLabel.setText("Category: " + category);
+        
+        try {
+            timeRemaining = Integer.parseInt(timer) * 60;
+            startTimer();
+        } catch (NumberFormatException e) {
+            timeRemaining = 600; // Default 10 minutes
+            startTimer();
+        }
+        
+        fetchQuestions(categoryId, numberOfQuestions, difficulty.toLowerCase());
+    }
+
+    private void fetchQuestions(String categoryId, String numberOfQuestions, String difficulty) {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://opentdb.com/api.php?amount=" + numberOfQuestions + "&category=" + categoryId + "&difficulty=" + difficulty.toLowerCase()))
+                .build();
+
+        client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+                .thenApply(HttpResponse::body)
+                .thenAccept(this::processQuestions)
+                .exceptionally(e -> {
+                    e.printStackTrace();
+                    return null;
+                });
+    }
+
+    private void processQuestions(String jsonResponse) {
+        QuizData quizData = new Gson().fromJson(jsonResponse, QuizData.class);
+        javafx.application.Platform.runLater(() -> {
+            questions = quizData.getResults();
+            displayQuestion(0);
+        });
+    }
+
+    private void displayQuestion(int index) {
+        QuizData.Result question = questions.get(index);
+        questionNumberLabel.setText("Q°: " + (index + 1) + "/" + questions.size());
+        questionLabel.setText(question.getQuestion());
+
+        List<String> answers = new ArrayList<>(question.getIncorrectAnswers());
+        answers.add(question.getCorrectAnswer());
+        Collections.shuffle(answers);
+
+        // Handle questions with less than 4 answers
+        choice1RadioButton.setText(answers.get(0));
+        choice2RadioButton.setText(answers.size() > 1 ? answers.get(1) : "");
+        choice3RadioButton.setText(answers.size() > 2 ? answers.get(2) : "");
+        choice4RadioButton.setText(answers.size() > 3 ? answers.get(3) : "");
+
+        // Hide radio buttons with no answers
+        choice2RadioButton.setVisible(answers.size() > 1);
+        choice3RadioButton.setVisible(answers.size() > 2);
+        choice4RadioButton.setVisible(answers.size() > 3);
+
+        answersGroup.selectToggle(null);
+    }
+
+    private void startTimer() {
+        if (timerLabel == null) {
+            System.err.println("Timer label not initialized!");
+            return;
+        }
+        
+        if (quizTimer != null) {
+            quizTimer.cancel();
+        }
+        
+        quizTimer = new Timer();
+        quizTimer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                if (timeRemaining > 0) {
+                    int minutes = timeRemaining / 60;
+                    int seconds = timeRemaining % 60;
+                    final String time = String.format("%02d:%02d", minutes, seconds);
+                    
+                    javafx.application.Platform.runLater(() -> {
+                        if (timerLabel != null) {
+                            timerLabel.setText(time);
+                        }
+                    });
+                    
+                    timeRemaining--;
+                } else {
+                    quizTimer.cancel();
+                    javafx.application.Platform.runLater(() -> showResults());
+                }
+            }
+        }, 0, 1000);
+    }
+
+    @FXML
+    protected void onNextButtonClick() {
+        if (answersGroup.getSelectedToggle() == null) {
+            showAlert("Please select an answer");
+            return;
+        }
+
+        RadioButton selected = (RadioButton) answersGroup.getSelectedToggle();
+        String answer = selected.getText();
+
+        if (currentQuestionIndex < questions.size() && 
+            answer.equals(questions.get(currentQuestionIndex).getCorrectAnswer())) {
+            score++;
+        }
+
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.size()) {
+            displayQuestion(currentQuestionIndex);
+        } else {
+            showResults();
+        }
+    }
+
+    private void showAlert(String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Quiz Game");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
+    private void showResults() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/quizgame/quizgame/views/ResultView.fxml"));
+            Parent root = loader.load();
+            
+            ResultViewController controller = loader.getController();
+            controller.initData(score, questions.size());
+            
+            Stage stage = (Stage) questionLabel.getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Fallback to simple alert if loading ResultView fails
+            showAlert("Quiz completed!\nYour score: " + score + "/" + questions.size());
+        }
+    }
+
+    @FXML
+    protected void onQuitButtonClick() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/quizgame/quizgame/views/StartQuiz.fxml"));
+            Scene scene = new Scene(loader.load());
+            Stage stage = (Stage) questionLabel.getScene().getWindow();
+            stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    protected void onChoiceSelected() {
+        // This method will be called when a radio button is selected
+        // You can add specific logic here if needed
+        // For now, we'll just enable the next button if an answer is selected
+        if (answersGroup.getSelectedToggle() != null) {
+            // You might want to enable a next button here if you have one
+        }
+    }
+}

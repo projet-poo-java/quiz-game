@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="391.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="114.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="-14.0" layoutY="-48.0" prefHeight="500.0" prefWidth="900.0">
+               <children>
+                  <BarChart layoutX="207.0" layoutY="296.0" prefHeight="146.0" prefWidth="281.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+                  <PieChart layoutX="502.0" layoutY="281.0" prefHeight="150.0" prefWidth="233.0" />
+                  <BarChart layoutX="582.0" layoutY="85.0" maxHeight="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="168.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </BarChart>
+                  <Label layoutX="279.0" layoutY="100.0" text="Welcome to your dashboard!" textFill="#e99905">
+                     <font>
+                        <Font name="Britannic Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <TextArea layoutX="274.0" layoutY="112.0" prefHeight="42.0" prefWidth="302.0" text="This is admin dashboard designed to reflect an overview of the most important events inside the team. Please add comments on what you want changed." wrapText="true">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </TextArea>
+                  <BarChart layoutX="220.0" layoutY="186.0" maxHeight="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="179.0" titleSide="LEFT">
+                     <xAxis>
+                        <CategoryAxis side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis prefHeight="51.0" prefWidth="42.0" side="LEFT" />
+                     </yAxis>
+                     <padding>
+                        <Insets left="80.0" top="10.0" />
+                     </padding>
+                  </BarChart>
+                  <Label layoutX="232.0" layoutY="188.0" prefHeight="15.0" prefWidth="107.0" text="le nombre de quiz créés">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="258.0" layoutY="219.0" text="100">
+                     <font>
+                        <Font name="Britannic Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="236.0" layoutY="242.0" prefHeight="15.0" prefWidth="99.0" text="1.10% Since yesterday">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <BarChart layoutX="388.0" layoutY="186.0" maxHeight="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="184.0" titleSide="LEFT">
+                     <xAxis>
+                        <CategoryAxis side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis prefHeight="51.0" prefWidth="42.0" side="LEFT" />
+                     </yAxis>
+                     <padding>
+                        <Insets left="80.0" top="10.0" />
+                     </padding>
+                  </BarChart>
+                  <Label layoutX="420.0" layoutY="188.0" prefHeight="15.0" prefWidth="88.0" text="les taux de reussite ">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="581.0" layoutY="188.0" prefHeight="15.0" prefWidth="107.0" text="le numero d'utilisateurs actifs">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="442.0" layoutY="219.0" text="50">
+                     <font>
+                        <Font name="Britannic Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="611.0" layoutY="219.0" text="50">
+                     <font>
+                        <Font name="Britannic Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="408.0" layoutY="242.0" prefHeight="15.0" prefWidth="99.0" text="1.10% Since yesterday">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="585.0" layoutY="242.0" prefHeight="15.0" prefWidth="99.0" text="1.10% Since yesterday">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <BarChart layoutX="577.0" layoutY="180.0" maxHeight="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="168.0" titleSide="LEFT">
+                     <xAxis>
+                        <CategoryAxis side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis prefHeight="51.0" prefWidth="37.0" side="LEFT" />
+                     </yAxis>
+                     <padding>
+                        <Insets left="80.0" top="10.0" />
+                     </padding>
+                  </BarChart>
+                  <Label layoutX="635.0" layoutY="290.0" prefHeight="15.0" prefWidth="107.0" text="1.10% Since yesterday">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="521.0" layoutY="292.0" text="Chart Title">
+                     <font>
+                        <Font name="Britannic Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="206.0" layoutY="290.0" text="Statistiques">
+                     <font>
+                        <Font name="Britannic Bold" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="522.0" layoutY="56.0" prefHeight="9.0" prefWidth="66.0" text="Juana Moreno">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="TOP_CENTER" layoutX="154.0" layoutY="48.0" prefHeight="30.0" prefWidth="607.0">
+                     <children>
+                        <Label prefWidth="33.0" text="Admin" textAlignment="RIGHT">
+                           <font>
+                              <Font name="Britannic Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets right="200.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../Downloads/Avatar.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="300.0" top="-10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="15.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../ressources/icon/notification.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets top="-20.0" />
+                           </VBox.margin>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="11.0" fitWidth="11.0" layoutX="165.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/icon/Dashboard.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="11.0" fitWidth="11.0" layoutX="166.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/icon/Add%20Quiz.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="11.0" fitWidth="11.0" layoutX="165.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/icon/Participants.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="11.0" fitWidth="11.0" layoutX="166.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/icon/Subjects.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="11.0" fitWidth="11.0" layoutX="166.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/icon/Settings.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="11.0" fitWidth="11.0" layoutX="166.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/icon/Log%20Out.png" />
+                     </image>
+                  </ImageView>
+                  <TilePane alignment="TOP_RIGHT" layoutX="161.0" layoutY="74.0" prefHeight="111.0" prefWidth="80.0">
+                     <children>
+                        <Button alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="17.0" prefWidth="52.0" style="-fx-background-color: transparent; -fx-border-width: 0;" text="Dashboard" textAlignment="RIGHT">
+                           <font>
+                              <Font size="8.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="17.0" prefWidth="47.0" style="-fx-background-color: transparent; -fx-border-width: 0;" text="Add Quiz">
+                           <font>
+                              <Font size="8.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="17.0" prefWidth="45.0" style="-fx-background-color: transparent; -fx-border-width: 0;" text="Participants">
+                           <font>
+                              <Font size="8.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="17.0" prefWidth="54.0" style="-fx-background-color: transparent; -fx-border-width: 0;" text="Subjects">
+                           <font>
+                              <Font size="8.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-width: 0;" text="Settings">
+                           <font>
+                              <Font size="8.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-width: 0;" text="Log Out">
+                           <font>
+                              <Font size="8.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </TilePane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

@@ -1,155 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
-<?import javafx.collections.FXCollections?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizgame.quizgame.controllers.StartQuizController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" styleClass="Start-background"  style="-fx-background-color: white;" stylesheets="@../../quizgame/assets/css/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizgame.quizgame.controllers.StartQuizController">
     <children>
-      <HBox alignment="CENTER" prefHeight="59.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+        <HBox alignment="CENTER" layoutY="39.0" prefHeight="59.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="39.0">
          <children>
-              <Text style="-fx-font-size: 16px;" text="Choose a category and set up your quiz!">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
+                <Text fill="#4e4a4a" style="-fx-font-size: 16px;" text="Choose a category and set up your quiz!" textAlignment="CENTER" wrappingWidth="343.4062488079071">
+                    <font>
+                        <Font name="Dubai Bold" size="54.0" />
+                    </font>
+                </Text>
          </children>
-      </HBox>
-      <HBox alignment="CENTER" prefHeight="59.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
-         <children>
-              <Button fx:id="historyButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" style="-fx-background-color: #FDB614;" text="History">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Button>
-              <Button fx:id="mathButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" style="-fx-background-color: #F7C5BA;" text="Mathematics">
-               <HBox.margin>
-                  <Insets left="50.0" />
-               </HBox.margin>
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Button>
-              <Button fx:id="computersButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" style="-fx-background-color: #A7A6BB;" text="Computers">
-               <HBox.margin>
-                  <Insets left="50.0" />
-               </HBox.margin>
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Button>
-              <Button fx:id="booksButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" style="-fx-background-color: #64DFEA;" text="Books">
-               <HBox.margin>
-                  <Insets left="50.0" />
-               </HBox.margin>
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Button>
-              <Button fx:id="natureButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" style="-fx-background-color: #BFFFCB;" text="Nature">
-               <HBox.margin>
-                  <Insets left="50.0" />
-               </HBox.margin>
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Button>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER" layoutX="10.0" layoutY="130.0" prefHeight="59.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
-         <children>
-      
-              <!-- Quiz Setup -->
-              <Text text="Number of Questions:">
-               <font>
-                  <Font size="12.0" />
-               </font>
-            </Text>
-              <TextField fx:id="numberOfQuestionsField" prefHeight="25.0" prefWidth="100.0" promptText="N° of questions" text="10">
-               <HBox.margin>
-                  <Insets left="15.0" />
-               </HBox.margin>
-               <font>
-                  <Font size="12.0" />
-               </font>
-            </TextField>
-      
-              <Text text="Select Level:">
-               <HBox.margin>
-                  <Insets left="15.0" />
-               </HBox.margin>
-               <font>
-                  <Font size="12.0" />
-               </font>
-            </Text>
-              <ComboBox fx:id="difficultyComboBox" prefHeight="25.0" prefWidth="100.0" promptText="Easy">
-                  <items>
-                      <FXCollections fx:factory="observableArrayList">
-                          <String fx:value="Easy" />
-                          <String fx:value="Medium" />
-                          <String fx:value="Hard" />
-                      </FXCollections>
-                  </items>
-               <HBox.margin>
-                  <Insets left="15.0" />
-               </HBox.margin>
-              </ComboBox>
-            <Text layoutX="207.0" layoutY="44.0" text="Timer (min):">
-               <HBox.margin>
-                  <Insets left="15.0" />
-               </HBox.margin>
-               <font>
-                  <Font size="12.0" />
-               </font>
-            </Text>
-            <TextField fx:id="timerField" layoutX="339.0" layoutY="27.0" prefHeight="25.0" prefWidth="100.0" promptText="timer" text="10">
-               <HBox.margin>
-                  <Insets left="15.0" />
-               </HBox.margin>
-               <font>
-                  <Font size="12.0" />
-               </font>
-            </TextField>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER" layoutX="10.0" layoutY="60.0" prefHeight="59.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="260.0">
-         <children>
-            <Text style="-fx-font-size: 16px;" text="Choose a category and set up your quiz!">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER" layoutX="20.0" layoutY="210.0" prefHeight="95.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="320.0">
-         <children>
-            <VBox alignment="CENTER" prefHeight="104.0" prefWidth="300.0">
-               <children>
-                  <TextField prefHeight="33.0" prefWidth="300.0" promptText="Enter invitation code">
-                     <font>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="59.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
+            <children>
+                <Button fx:id="historyButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" styleClass="categoryButton" text="History">
+                    <font>
                         <Font size="13.0" />
-                     </font>
-                  </TextField>
-            
-                    <Button fx:id="startQuizButton" prefHeight="32.0" prefWidth="73.0" style="-fx-background-color: #533B7C;" text="Join" textFill="WHITE">
-                     <VBox.margin>
-                        <Insets top="20.0" />
-                     </VBox.margin>
-                     <font>
+                    </font>
+                </Button>
+                <Button fx:id="mathButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" styleClass="categoryButton" text="Mathematics">
+                    <HBox.margin>
+                        <Insets left="50.0" />
+                    </HBox.margin>
+                    <font>
                         <Font size="13.0" />
-                     </font>
-                  </Button>
-               </children>
-            </VBox>
-         </children>
-      </HBox>
+                    </font>
+                </Button>
+                <Button fx:id="computersButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" styleClass="categoryButton" text="Computers">
+                    <HBox.margin>
+                        <Insets left="50.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Button>
+                <Button fx:id="booksButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" styleClass="categoryButton" text="Books">
+                    <HBox.margin>
+                        <Insets left="50.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Button>
+                <Button fx:id="natureButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" styleClass="categoryButton" text="Nature">
+                    <HBox.margin>
+                        <Insets left="50.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="10.0" layoutY="130.0" prefHeight="59.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
+            <children>
+                <Text text="Number of Questions:">
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="numberOfQuestionsField" prefHeight="25.0" prefWidth="100.0" promptText="N° of questions" text="10">
+                    <HBox.margin>
+                        <Insets left="15.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                </TextField>
+                <Text text="Select Level:">
+                    <HBox.margin>
+                        <Insets left="15.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                </Text>
+                <ComboBox fx:id="difficultyComboBox" prefHeight="25.0" prefWidth="100.0" promptText="Easy">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Easy" />
+                            <String fx:value="Medium" />
+                            <String fx:value="Hard" />
+                        </FXCollections>
+                    </items>
+                    <HBox.margin>
+                        <Insets left="15.0" />
+                    </HBox.margin>
+                </ComboBox>
+                <Text layoutX="207.0" layoutY="44.0" text="Timer (min):">
+                    <HBox.margin>
+                        <Insets left="15.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="timerField" layoutX="339.0" layoutY="27.0" prefHeight="25.0" prefWidth="100.0" promptText="timer" text="10">
+                    <HBox.margin>
+                        <Insets left="15.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                </TextField>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="20.0" layoutY="210.0" prefHeight="95.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="320.0">
+            <children>
+                <VBox alignment="CENTER" prefHeight="104.0" prefWidth="300.0">
+                    <children>
+                        <TextField prefHeight="33.0" prefWidth="300.0" promptText="Enter invitation code">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </TextField>
+                        <Button fx:id="startQuizButton" prefHeight="32.0" prefWidth="73.0" styleClass="joinButton" text="Join" textFill="WHITE">
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
     </children>
 </AnchorPane>

@@ -29,23 +29,117 @@
   font-weight: 600;
 }
 
-* {
-  -fx-font-family: "OpenSans", Calibri, "Trebuchet MS",sans-serif;
-}
+/* css Dashboard user */
 
 .menuItem:hover {
-  -fx-border-color: #660099;
+  -fx-border-color: #533B7C;
   -fx-border-width: 0px 0px 3px 0px;
 }
 
 .sidebarItem:hover {
   -fx-background-color: #146886;
-  -fx-border-color: white;
+  -fx-border-color: WHITE ;
   -fx-border-width: 0px 0px 0px 3px;
 }
 
-.bgImg {
-  -fx-background-image: url("images/purple_watercolour_background_corners.jpg");
-  -fx-background-size: cover;
-  -fx-background-position: center;
+/* Global Styles */
+* {
+  -fx-font-family: "OpenSans", sans-serif;
+  -fx-font-size: 14px;
+}
+
+/* Category Buttons */
+.categoryButton {
+  -fx-background-radius: 10;
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0, 2, 2);
+  -fx-background-color: linear-gradient(to bottom, #533B7C, #533B9C);
+}
+.categoryButton:hover {
+  -fx-background-color: #6A51A3;
+  -fx-scale-x: 1.05;
+  -fx-scale-y: 1.05;
+}
+
+/* Join Button */
+.joinButton {
+  -fx-background-color: #727293;
+  -fx-background-radius: 10;
+  -fx-font-size: 14px;
+  -fx-font-weight: bold;
+  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 2, 2);
+}
+.joinButton:hover {
+  -fx-background-color: #727293;
+  -fx-scale-x: 1.05;
+  -fx-scale-y: 1.05;
+}
+
+/* TextField */
+.text-field {
+  -fx-background-color: #f5f5f5;
+  -fx-background-radius: 8;
+  -fx-border-color: #bbb;
+  -fx-border-width: 1;
+  -fx-padding: 5 10 5 10;
+  -fx-font-size: 14px;
+  -fx-text-fill: #333;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 2, 0, 1, 1);
+}
+
+.text-field:focused {
+  -fx-background-color: #ffffff;
+  -fx-border-color: #533B7C;
+  -fx-text-fill: #000000;
+}
+
+.text-field .prompt-text {
+  -fx-text-fill: #999;
+}
+
+/* ComboBox Styling */
+.combo-box {
+  -fx-background-color: #f5f5f5;
+  -fx-background-radius: 8;
+  -fx-border-color: #bbb;
+  -fx-border-width: 1;
+  -fx-font-size: 14px;
+  -fx-text-fill: #333;
+  -fx-padding: 5 10 5 10;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 2, 0, 1, 1);
+}
+
+.combo-box:focused {
+  -fx-background-color: #ffffff;
+  -fx-border-color: #533B7C;
+}
+
+.combo-box .combo-box-popup {
+  -fx-background-color: #ffffff;
+  -fx-border-color: #bbb;
+  -fx-border-radius: 5;
+  -fx-padding: 5;
+}
+
+.combo-box .list-cell {
+  -fx-text-overrun: ellipsis; /* Si le texte est long, affiche "..." */
+}
+
+.combo-box-display {
+  -fx-text-overrun: clip; /* Affiche tout le texte dans le champ principal */
+}
+
+.dashboard-background {
+  -fx-background-image: url("../../assets/images/game-user.jpg");
+  -fx-background-size: cover; /* Ajuste l'image pour couvrir toute la zone */
+  -fx-background-position: center center; /* Centrer l'image */
+  -fx-background-repeat: no-repeat; /* Ne pas répéter l'image */
+}
+
+.welcom1 {
+  -fx-max-width:80;  /* Taille de la police */
+  -fx-font-family: 'Berlin Sans FB Demi';
+  -fx-font-weight: bold;    /* Définit le texte en gras */
+  -fx-text-fill: white;     /* Couleur du texte */
 }

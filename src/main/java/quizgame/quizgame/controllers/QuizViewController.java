@@ -64,22 +64,40 @@ public class QuizViewController {
     private void fetchQuestions(String categoryId, String numberOfQuestions, String difficulty) {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://opentdb.com/api.php?amount=" + numberOfQuestions + "&category=" + categoryId + "&difficulty=" + difficulty.toLowerCase()))
+                .uri(URI.create("https://opentdb.com/api.php?amount=" + numberOfQuestions +
+                        "&category=" + categoryId +
+                        "&difficulty=" + difficulty.toLowerCase() +
+                        "&encode=base64"))
                 .build();
 
         client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
                 .thenApply(HttpResponse::body)
-                .thenAccept(this::processQuestions)
+                .thenAccept(this::processQuestionsBase64)
                 .exceptionally(e -> {
                     e.printStackTrace();
                     return null;
                 });
     }
 
-    private void processQuestions(String jsonResponse) {
-        QuizData quizData = new Gson().fromJson(jsonResponse, QuizData.class);
+
+    // Décoder les questions Base64
+    private void processQuestionsBase64(String jsonResponse) {
+        Gson gson = new Gson();
+        QuizData quizData = gson.fromJson(jsonResponse, QuizData.class);
         javafx.application.Platform.runLater(() -> {
             questions = quizData.getResults();
+
+            // Décoder les chaînes Base64
+            for (QuizData.Result question : questions) {
+                question.setQuestion(new String(Base64.getDecoder().decode(question.getQuestion())));
+                question.correct_answer = new String(Base64.getDecoder().decode(question.getCorrectAnswer()));
+                List<String> decodedAnswers = new ArrayList<>();
+                for (String incorrectAnswer : question.getIncorrectAnswers()) {
+                    decodedAnswers.add(new String(Base64.getDecoder().decode(incorrectAnswer)));
+                }
+                question.incorrect_answers = decodedAnswers;
+            }
+
             displayQuestion(0);
         });
     }

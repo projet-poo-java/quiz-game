@@ -1,5 +1,4 @@
-CREATE DATABASE `quizgame`;
-USE `quizgame`;
+
 
 CREATE TABLE `users` (
   `id` int PRIMARY KEY AUTO_INCREMENT,

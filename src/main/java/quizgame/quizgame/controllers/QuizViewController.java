@@ -208,6 +208,15 @@ public class QuizViewController {
             showAlert("Quiz completed!\nYour score: " + score + "/" + questions.size());
         }
     }
+    @FXML
+    protected void onPreviousButtonClick() {
+        if (currentQuestionIndex > 0) {
+            currentQuestionIndex--;
+            displayQuestion(currentQuestionIndex);
+        } else {
+            showAlert("This is the first question!");
+        }
+    }
 
     @FXML
     protected void onQuitButtonClick() {

@@ -16,7 +16,7 @@
          <children>
             <ImageView fitHeight="54.0" fitWidth="176.0" layoutX="10.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="8.0">
                <image>
-                  <Image url="@assets/images/logo.png" />
+                  <Image url="@../../quizgame/assets/images/logo.png" />
                </image>
             </ImageView>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="11.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="200.0" style="-fx-font-size: 30; -fx-text-fill: white; " text="Quiz Game" textAlignment="CENTER" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" />
@@ -37,7 +37,7 @@
             </Label>
             <ImageView fitHeight="34.0" fitWidth="32.0" layoutX="785.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="24.0" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="24.0">
                <image>
-                  <Image url="@assets/images/timer.png" />
+                  <Image url="@../../quizgame/assets/images/timer.png" />
                </image>
             </ImageView>
          </children>

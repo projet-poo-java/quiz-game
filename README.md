@@ -32,7 +32,28 @@ Un jeu de quiz interactif qui permet aux utilisateurs de tester leurs connaissan
 ![Results Screen](screenshots/results.png)
 *Quiz completion and score display*
 
+### Admin Dashboard
+![admin Dashboard statistics](screenshots/admin-statistics.png)
+*admin dashboard statistics*
 
+![admin Dashboard Users](screenshots/admin-users-list.png)
+*admin dashboard users list*
+
+![admin Dashboard Add User](screenshots/admin-add-user.png)
+*admin dashboard add user*
+
+![admin Dashboard Subjects](screenshots/admin-subjects-list.png)
+*admin dashboard subjects list*
+
+![admin Dashboard Add Subject](screenshots/admin-add-subject.png)
+*admin dashboard Add Subject*
+
+![admin Dashboard Quizzes](screenshots/admin-quizzes.png)
+*admin dashboard quizzes list*
+![admin Dashboard Add Quiz](screenshots/admin-add-quiz.png)
+*admin dashboard Add Quiz*
+![admin Dashboard Add Question](screenshots/admin-add-qst.png)
+*admin dashboard Add question*
 ## Fonctionnalités
 - Inscription et connexion des utilisateurs
 - Contrôle d'accès basé sur les rôles

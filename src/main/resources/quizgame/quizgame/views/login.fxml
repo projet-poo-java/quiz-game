@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizgame.quizgame.controllers.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizgame.quizgame.controllers.auth.AuthController">
    <children>
       <HBox prefHeight="500.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -22,10 +22,11 @@
                         <Image url="@../assets/images/login.png" />
                      </image>
                   </ImageView>
-               </children></AnchorPane>
+               </children>
+            </AnchorPane>
             <AnchorPane prefHeight="500.0" prefWidth="450.0" style="-fx-background-color: ffffff;" HBox.hgrow="ALWAYS">
                <children>
-                  <ImageView fitHeight="103.0" fitWidth="234.0" layoutX="112.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="390.0077896118164" AnchorPane.leftAnchor="112.0" AnchorPane.rightAnchor="103.0" AnchorPane.topAnchor="18.0">
+                  <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="173.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="173.0" AnchorPane.rightAnchor="176.0" AnchorPane.topAnchor="23.0">
                      <image>
                         <Image url="@../assets/images/logo.png" />
                      </image>
@@ -62,12 +63,13 @@
                         <Font size="13.0" />
                      </font>
                   </Label>
-                  <Hyperlink fx:id="goToRegisterBtn" layoutX="296.0" layoutY="433.0" text="Register" textFill="#533b7c" onAction="#goToRegister">
+                  <Hyperlink fx:id="goToRegisterBtn" layoutX="296.0" layoutY="433.0" onAction="#goToRegister" text="Register" textFill="#533b7c">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Hyperlink>
-               </children></AnchorPane>
+               </children>
+            </AnchorPane>
          </children>
       </HBox>
    </children>

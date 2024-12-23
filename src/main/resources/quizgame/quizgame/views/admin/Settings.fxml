@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" stylesheets="@../../assets/css/styles.css"
+    xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+    AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+    <children>
+        <AnchorPane layoutX="88.0" layoutY="1.0" prefHeight="60.0" prefWidth="700.0"
+            styleClass="bg-primary" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+            AnchorPane.topAnchor="0.0">
+            <children>
+                <Label layoutX="17.0" layoutY="13.0" styleClass="dash-header" text="Settings" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" stylesheets="@../../assets/css/styles.css"
+   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+   AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/23.0.1"
+   xmlns:fx="http://javafx.com/fxml/1"
+   fx:controller="quizgame.quizgame.controllers.admin.UsersController">
+   <children>
+      <AnchorPane layoutX="88.0" layoutY="1.0" prefHeight="60.0" prefWidth="700.0"
+         styleClass="bg-primary" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+         AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="17.0" layoutY="13.0" styleClass="dash-header" text="Users List" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="usersTable" layoutX="11.0" layoutY="120.0" prefHeight="314.0"
+         prefWidth="673.0" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="10.0"
+         AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="120.0">
+         <columns>
+            <TableColumn fx:id="idColumn" sortType="DESCENDING" styleClass="table-col" text="ID" />
+            <TableColumn fx:id="nameColumn" prefWidth="150.0" styleClass="table-col" text="Name" />
+            <TableColumn fx:id="emailColumn" minWidth="0.0" prefWidth="290.0" styleClass="table-col"
+               text="Email" />
+            <TableColumn fx:id="phoneColumn" minWidth="0.0" prefWidth="150.0" styleClass="table-col"
+               text="Phone" />
+            <TableColumn fx:id="roleColumn" prefWidth="90.0" styleClass="table-col" text="Role" />
+            <TableColumn fx:id="isEmailVerifiedColumn" prefWidth="150.0" styleClass="table-col"
+               text="Email Verified" />
+            <TableColumn fx:id="actionColumn" prefWidth="200.0" sortable="false"
+               styleClass="table-col" text="Action" />
+         </columns>
+      </TableView>
+      <ProgressIndicator fx:id="loadingIndicator" layoutX="325.0" layoutY="242.0" maxHeight="50.0"
+         maxWidth="50.0" minHeight="50.0" minWidth="50.0" prefHeight="50.0" prefWidth="50.0"
+         visible="false" AnchorPane.leftAnchor="325.0" AnchorPane.rightAnchor="325.0" />
+      <AnchorPane layoutY="72.0" prefHeight="35.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0"
+         AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="72.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" text="Export"
+               AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="TABLE" />
+               </graphic>
+               <styleClass>
+                  <String fx:value="table-btn" />
+                  <String fx:value="export-btn" />
+               </styleClass>
+            </Button>
+            <Button fx:id="addUserBtn" mnemonicParsing="false" prefHeight="35.0" prefWidth="70.0"
+               text="Add" AnchorPane.rightAnchor="118.0" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS" text="" />
+               </graphic>
+               <styleClass>
+                  <String fx:value="table-btn" />
+                  <String fx:value="add-btn" />
+               </styleClass>
+            </Button>
+            <TextField fx:id="searchField" prefHeight="35.0" prefWidth="306.0"
+               promptText="search..." styleClass="search-input" AnchorPane.leftAnchor="10.0" />
+            <Button fx:id="searchButton" layoutX="325.0" layoutY="73.0" mnemonicParsing="false"
+               prefHeight="35.0" prefWidth="90.0" text="Search" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" />
+               </graphic>
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="table-btn" />
+                  <String fx:value="search-btn" />
+               </styleClass>
+            </Button>
+         </children>
+      </AnchorPane>
+      <!-- <Pagination layoutX="228.0" layoutY="447.0" pageCount="4" prefHeight="51.0"
+      prefWidth="244.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="228.0"
+      AnchorPane.rightAnchor="228.0" /> -->
+   </children>
+</AnchorPane>

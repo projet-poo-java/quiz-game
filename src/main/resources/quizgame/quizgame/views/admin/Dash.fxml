@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:controller="quizgame.quizgame.controllers.admin.DashController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" stylesheets="@../../assets/css/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="15.0" layoutY="8.0" maxWidth="300.0" prefHeight="500.0" prefWidth="200.0" style="-fx-border-color: gray;" styleClass="bg-primary" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fitHeight="82.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../assets/images/logo-light.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets top="15.0" />
+                    </VBox.margin>
+                </ImageView>
+                <Button fx:id="dashboardButton" onAction="#handleDashboard" alignment="BOTTOM_LEFT" mnemonicParsing="false" prefHeight="39.0" prefWidth="175.0" styleClass="side-nav" text="Dashboard">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="HOME" wrappingWidth="36.0" />
+                    </graphic>
+                </Button>
+                <Button fx:id="usersButton" onAction="#handleUsers" alignment="BOTTOM_LEFT" mnemonicParsing="false" prefHeight="39.0" prefWidth="175.0" styleClass="side-nav" text="Users">
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USERS" wrappingWidth="36.0" />
+                    </graphic>
+                </Button>
+                <Button fx:id="categoriesButton" onAction="#handleSubjects" alignment="BOTTOM_LEFT" mnemonicParsing="false" prefHeight="39.0" prefWidth="175.0" styleClass="side-nav" text="Subjects">
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="LIST" wrappingWidth="36.0" />
+                    </graphic>
+                </Button>
+                <Button fx:id="quizesButton" onAction="#handleQuizes" alignment="BOTTOM_LEFT" mnemonicParsing="false" prefHeight="39.0" prefWidth="175.0" styleClass="side-nav" text="Quizes">
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="FILE" wrappingWidth="36.0" />
+                    </graphic>
+                </Button>
+                <Button fx:id="settingsButton" onAction="#handleSettings" alignment="BOTTOM_LEFT" mnemonicParsing="false" prefHeight="39.0" prefWidth="175.0" styleClass="side-nav" text="Settings">
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="GEAR" wrappingWidth="36.0" />
+                    </graphic>
+                </Button>
+                <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="175.0" style="-fx-background-color: none;" VBox.vgrow="ALWAYS">
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </Button>
+
+                <Button onAction="#handleLogout" alignment="BOTTOM_LEFT" mnemonicParsing="false" prefHeight="39.0" prefWidth="175.0" styleClass="side-nav-logout" text="Logout">
+                    <VBox.margin>
+                        <Insets bottom="15.0" top="20.0" />
+                    </VBox.margin>
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="POWER_OFF" wrappingWidth="36.0" />
+                    </graphic>
+                </Button>
+            </children>
+        </VBox>
+        
+        <!-- Content pane for dynamic content -->
+        <AnchorPane fx:id="contentPane" layoutX="198.0" layoutY="46.0" prefHeight="500.0" prefWidth="700.0" styleClass="bg-secondary-light" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <!-- Content will be loaded here -->
+            <ProgressIndicator fx:id="loadingIndicator" layoutX="400" layoutY="250" visible="false"/>
+        </AnchorPane>
+    </children>
+</AnchorPane>

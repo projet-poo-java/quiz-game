@@ -7,6 +7,11 @@ module quizgame.quizgame {
 
     opens quizgame.quizgame to javafx.fxml, com.google.gson;
     opens quizgame.quizgame.controllers to javafx.fxml, com.google.gson;
+    opens quizgame.quizgame.controllers.admin to javafx.fxml;
+    opens quizgame.quizgame.models to javafx.base;
+    opens quizgame.quizgame.controllers.auth to javafx.fxml;
+
     exports quizgame.quizgame.controllers to javafx.fxml;
     exports quizgame.quizgame;
+    exports quizgame.quizgame.controllers.auth;
 }

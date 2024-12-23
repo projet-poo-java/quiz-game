@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.control.Alert;
+import javafx.scene.image.Image;
 
 import java.io.IOException;
 
@@ -14,8 +15,8 @@ public class App extends Application {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("views/home.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 900, 500);
-            scene.getStylesheets().add(App.class.getResource("assets/css/styles.css").toExternalForm());
-
+            Image image = new Image(getClass().getResourceAsStream("assets/images/logo.png"));
+            stage.getIcons().add(image);
             stage.setTitle("Quiz Game - Home");
             stage.setScene(scene);
             stage.show();

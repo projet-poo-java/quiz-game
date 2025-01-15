@@ -16,12 +16,22 @@ public class Subject {
     private String name;
     private String description;
     private Timestamp createdAt;
+    private boolean isPrivate;
+    private String invitationCode;
+    private int createdBy;
 
-    public Subject(int id, String name, String description, Timestamp createdAt) {
+    public Subject(int id, String name, String description, Timestamp createdAt, boolean isPrivate, String invitationCode, int createdBy) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.createdAt = createdAt;
+        this.isPrivate = isPrivate;
+        this.invitationCode = invitationCode;
+        this.createdBy = createdBy;
+    }
+
+    public Subject(int id, String name, String description, Timestamp createdAt) {
+        this(id, name, description, createdAt, false, null, 0);
     }
 
     // Getters and Setters
@@ -36,6 +46,15 @@ public class Subject {
     
     public Timestamp getCreatedAt() { return createdAt; }
     public void setCreatedAt(Timestamp createdAt) { this.createdAt = createdAt; }
+
+    public boolean isPrivate() { return isPrivate; }
+    public void setPrivate(boolean isPrivate) { this.isPrivate = isPrivate; }
+    
+    public String getInvitationCode() { return invitationCode; }
+    public void setInvitationCode(String invitationCode) { this.invitationCode = invitationCode; }
+    
+    public int getCreatedBy() { return createdBy; }
+    public void setCreatedBy(int createdBy) { this.createdBy = createdBy; }
 
     @Override
     public String toString() {
@@ -68,7 +87,10 @@ public class Subject {
                     rs.getInt("id"),
                     rs.getString("name"),
                     rs.getString("description"),
-                    rs.getTimestamp("created_at")
+                    rs.getTimestamp("created_at"),
+                    rs.getBoolean("is_private"),
+                    rs.getString("invitation_code"),
+                    rs.getInt("created_by")
                 ));
             }
         } catch (SQLException e) {

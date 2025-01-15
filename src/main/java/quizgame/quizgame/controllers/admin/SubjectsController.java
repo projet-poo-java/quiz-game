@@ -25,6 +25,7 @@ import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextArea;
 import javafx.collections.transformation.FilteredList;
+import javafx.scene.control.CheckBox;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -63,6 +64,10 @@ public class SubjectsController {
     private TextField searchField;
     @FXML
     private Button searchButton;
+    @FXML
+    private CheckBox isPrivateCheckbox;
+    @FXML
+    private TextField invitationCodeField;
 
     private Subject currentSubject;
     private FilteredList<Subject> filteredSubjects;
@@ -111,25 +116,53 @@ public class SubjectsController {
         if (searchButton != null) {
             searchButton.setOnAction(event -> filterSubjects());
         }
+
+        if (isPrivateCheckbox != null) {
+            isPrivateCheckbox.selectedProperty().addListener((obs, oldVal, newVal) -> {
+                invitationCodeField.setDisable(!newVal);
+                if (!newVal) invitationCodeField.clear();
+            });
+        }
     }
 
     private void saveSubject() {
         String name = nameField.getText();
         String description = descriptionField.getText();
+        boolean isPrivate = isPrivateCheckbox != null && isPrivateCheckbox.isSelected();
+        String invitationCode = isPrivate ? invitationCodeField.getText() : null;
 
-        if (currentSubject == null) {
-            // Add new subject
-            Subject newSubject = new Subject(0, name, description, null);
-            addSubject(newSubject);
-        } else {
-            // Update existing subject
-            currentSubject.setName(name);
-            currentSubject.setDescription(description);
-            updateSubject(currentSubject);
+        if (isPrivate && (invitationCode == null || invitationCode.trim().isEmpty())) {
+            showError("Error", "Private subjects must have an invitation code");
+            return;
         }
 
-        ((Stage) saveButton.getScene().getWindow()).close();
-        loadSubjects(); // Reload subjects to reflect the changes
+        try (Connection conn = DatabaseConnection.getConnection()) {
+            String sql;
+            if (currentSubject == null) {
+                sql = "INSERT INTO subjects (name, description, is_private, invitation_code, created_by) VALUES (?, ?, ?, ?, ?)";
+            } else {
+                sql = "UPDATE subjects SET name = ?, description = ?, is_private = ?, invitation_code = ? WHERE id = ?";
+            }
+
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, name);
+            pstmt.setString(2, description);
+            pstmt.setBoolean(3, isPrivate);
+            pstmt.setString(4, invitationCode);
+            
+            if (currentSubject == null) {
+                pstmt.setInt(5, getCurrentUserId()); // Implement this method to get logged-in user ID
+            } else {
+                pstmt.setInt(5, currentSubject.getId());
+            }
+
+            pstmt.executeUpdate();
+            ((Stage) saveButton.getScene().getWindow()).close();
+            loadSubjects();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            showError("Error", "Failed to save subject");
+        }
     }
 
     private void loadSubjects() {
@@ -171,8 +204,15 @@ public class SubjectsController {
                 PreparedStatement stmt = conn.prepareStatement(query);
                 ResultSet rs = stmt.executeQuery()) {
             while (rs.next()) {
-                Subject subject = new Subject(rs.getInt("id"), rs.getString("name"), rs.getString("description"),
-                        rs.getTimestamp("created_at"));
+                Subject subject = new Subject(
+                    rs.getInt("id"),
+                    rs.getString("name"),
+                    rs.getString("description"),
+                    rs.getTimestamp("created_at"),
+                    rs.getBoolean("is_private"),
+                    rs.getString("invitation_code"),
+                    rs.getInt("created_by")
+                );
                 subjects.add(subject);
             }
         } catch (SQLException e) {
@@ -304,6 +344,11 @@ public class SubjectsController {
     public void setSubjectData(Subject subject) {
         nameField.setText(subject.getName());
         descriptionField.setText(subject.getDescription());
+        if (isPrivateCheckbox != null) {
+            isPrivateCheckbox.setSelected(subject.isPrivate());
+            invitationCodeField.setText(subject.getInvitationCode());
+            invitationCodeField.setDisable(!subject.isPrivate());
+        }
     }
 
     public void setCurrentSubject(Subject subject) {
@@ -326,5 +371,11 @@ public class SubjectsController {
             filteredSubjects.setPredicate(subject -> subject.getName().toLowerCase().contains(lowerCaseFilter) ||
                     subject.getDescription().toLowerCase().contains(lowerCaseFilter));
         }
+    }
+
+    private int getCurrentUserId() {
+        // Implement this method to get the ID of the currently logged-in user
+        // This should come from your authentication system
+        return 1; // Temporary return value
     }
 }

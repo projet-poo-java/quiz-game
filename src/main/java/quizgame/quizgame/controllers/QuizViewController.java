@@ -103,6 +103,10 @@ public class QuizViewController {
     }
 
     private void displayQuestion(int index) {
+        if (questions == null || questions.isEmpty()) {
+            showAlert("No questions available");
+            return;
+        }
         QuizData.Result question = questions.get(index);
         questionNumberLabel.setText("Q°: " + (index + 1) + "/" + questions.size());
         questionLabel.setText(question.getQuestion());
@@ -161,7 +165,7 @@ public class QuizViewController {
 
     @FXML
     protected void onNextButtonClick() {
-        if (answersGroup.getSelectedToggle() == null) {
+        if (answersGroup == null || answersGroup.getSelectedToggle() == null) {
             showAlert("Please select an answer");
             return;
         }

@@ -26,7 +26,23 @@ CREATE TABLE IF NOT EXISTS subjects (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL UNIQUE,
     description TEXT,
+    created_by INT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Modify subjects table to add invitation_code
+ALTER TABLE subjects ADD COLUMN invitation_code VARCHAR(50) NULL;
+ALTER TABLE subjects ADD COLUMN is_private BOOLEAN DEFAULT FALSE;
+
+-- Create table for user access to private subjects
+CREATE TABLE IF NOT EXISTS subject_access (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    subject_id INT NOT NULL,
+    user_id INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (subject_id) REFERENCES subjects(id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    UNIQUE KEY unique_access (subject_id, user_id)
 );
 
 -- Table: quizzes
@@ -138,5 +154,17 @@ INSERT INTO answers (content, is_correct, question_id) VALUES
 ('4', 1, 3), ('8', 0, 3), ('2', 0, 3), ('16', 0, 3),
 ('x = 3', 1, 4), ('x = 2', 0, 4), ('x = 1', 0, 4), ('x = 4', 0, 4),
 ('2', 0, 5), ('3', 0, 5), ('5', 1, 5), ('6', 0, 5);
+
+-- Add some test private subjects
+INSERT INTO subjects (name, description, is_private, invitation_code, created_by) VALUES
+('Private Math Advanced', 'Advanced mathematics course', true, 'MATH123', 1),
+('Private Physics', 'Special physics course', true, 'PHYS456', 1),
+('Private Chemistry', 'Advanced chemistry lessons', true, 'CHEM789', 2);
+
+-- Add some test subject access
+INSERT INTO subject_access (subject_id, user_id) VALUES
+(11, 1),  -- Adjust these IDs based on your actual subject and user IDs
+(11, 2),
+(12, 1);
 
 -- End of SQL dump.

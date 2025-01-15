@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: white; -fx-padding: 20;" stylesheets="@../assets/css/styles.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="quizgame.quizgame.controllers.QuizSettingsModalController">
+    <children>
+        <HBox alignment="BASELINE_CENTER" spacing="10">
+            <Label text="Number of Questions:" />
+            <TextField fx:id="numberOfQuestionsField" prefWidth="100" text="10" />
+        </HBox>
+        
+        <HBox alignment="BASELINE_CENTER" spacing="10">
+            <Label text="Select Level:" />
+            <ComboBox fx:id="difficultyComboBox" prefHeight="25.0" prefWidth="154.0" styleClass="select-box">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Easy" />
+                        <String fx:value="Medium" />
+                        <String fx:value="Hard" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+        </HBox>
+        
+        <HBox alignment="BASELINE_CENTER" spacing="10">
+            <Label text="Timer (min):" />
+            <TextField fx:id="timerField" prefHeight="25.0" prefWidth="155.0" text="10" />
+        </HBox>
+        
+        <HBox alignment="CENTER" spacing="20">
+            <Button onAction="#onStartQuiz" styleClass="categoryButton" text="Start Quiz" />
+            <Button onAction="#onCancel" style="-fx-background-color: #F7931D;" styleClass="categoryButton" text="Cancel" />
+        </HBox>
+    </children>
+</VBox>

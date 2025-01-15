@@ -12,8 +12,13 @@ import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import java.util.Optional;
+import javafx.scene.Parent;
+import quizgame.quizgame.App;
 
 public class DashController {
+    private String userEmail;
+    private String userName;
+
     @FXML
     private AnchorPane contentPane;
     
@@ -23,6 +28,11 @@ public class DashController {
     @FXML
     public void initialize() {
         handleDashboard(null);
+    }
+
+    public void setUserInfo(String email, String name) {
+        this.userEmail = email;
+        this.userName = name;
     }
 
     @FXML
@@ -47,7 +57,16 @@ public class DashController {
 
     @FXML
     private void handleSettings(ActionEvent event) {
-        loadContent("Settings.fxml");
+        try {
+            FXMLLoader loader = new FXMLLoader(App.class.getResource("views/admin/Settings.fxml"));
+            Parent settingsView = loader.load();
+            SettingsController settingsController = loader.getController();
+            settingsController.setUserEmail(userEmail);
+            contentPane.getChildren().clear();
+            contentPane.getChildren().add(settingsView);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

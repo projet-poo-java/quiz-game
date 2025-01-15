@@ -2,9 +2,12 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
 <AnchorPane prefHeight="500.0" prefWidth="700.0" stylesheets="@../../assets/css/styles.css"
     xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="quizgame.quizgame.controllers.admin.SettingsController"
     AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
     AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
     <children>
@@ -15,5 +18,26 @@
                 <Label layoutX="17.0" layoutY="13.0" styleClass="dash-header" text="Settings" />
             </children>
         </AnchorPane>
+        <VBox layoutX="50.0" layoutY="100.0" spacing="15">
+            <Label text="Change Password" styleClass="section-header"/>
+            <GridPane vgap="10" hgap="10">
+                <PasswordField fx:id="oldPasswordField" promptText="Old Password" GridPane.rowIndex="0"/>
+                <PasswordField fx:id="newPasswordField" promptText="New Password" GridPane.rowIndex="1"/>
+                <PasswordField fx:id="confirmPasswordField" promptText="Confirm New Password" GridPane.rowIndex="2"/>
+                <Button fx:id="changePasswordBtn" text="Change Password" 
+                        onAction="#handleChangePassword" GridPane.rowIndex="3"/>
+                <Label fx:id="messageLabel" styleClass="message-label" GridPane.rowIndex="4"/>
+            </GridPane>
+        </VBox>
+        <VBox layoutX="50.0" layoutY="300.0" spacing="15" styleClass="danger-zone">
+            <Label text="Danger Zone" styleClass="danger-header"/>
+            <VBox spacing="10" styleClass="danger-box">
+                <Label text="Delete Account" styleClass="danger-text"/>
+                <Label text="Once you delete your account, there is no going back. Please be certain." 
+                       styleClass="warning-text"/>
+                <Button fx:id="deleteAccountBtn" text="Delete Account" 
+                        onAction="#handleDeleteAccount" styleClass="danger-button"/>
+            </VBox>
+        </VBox>
     </children>
 </AnchorPane>

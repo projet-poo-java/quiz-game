@@ -1,5 +1,6 @@
 package quizgame.quizgame.middlewares;
 
+import quizgame.quizgame.controllers.admin.DashController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -17,6 +18,12 @@ public class RoleMiddleWare {
         try {
             FXMLLoader loader = new FXMLLoader(App.class.getResource("views/" + fxmlFile));
             Parent root = loader.load();
+            
+            if (role.equals("admin")) {
+                DashController dashController = loader.getController();
+                dashController.setUserInfo(email, name);
+            }
+
             Scene scene = new Scene(root, 900, 500);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);

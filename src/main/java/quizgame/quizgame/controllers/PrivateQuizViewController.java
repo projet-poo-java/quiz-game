@@ -248,22 +248,28 @@ public class PrivateQuizViewController {
             timer.stop();
         }
         
-        // Calculate final score percentage
-        double percentage = (score * 100.0) / questions.size();
-        
-        // Show results dialog
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Quiz Complete");
-        alert.setHeaderText("Your Results");
-        alert.setContentText(String.format(
-            "Score: %d/%d (%.1f%%)\nTime remaining: %s",
-            score, questions.size(), percentage, timerLabel.getText()
-        ));
-
-        alert.showAndWait().ifPresent(response -> {
+        try {
+            // Save score before showing results
             saveScore();
-            returnToMainScreen();
-        });
+            
+            // Load the ResultView
+            FXMLLoader loader = new FXMLLoader(App.class.getResource("views/ResultView.fxml"));
+            Parent root = loader.load();
+            
+            ResultViewController controller = loader.getController();
+            controller.initData(score, questions.size());
+            
+            // Switch to result view
+            Stage stage = (Stage) questionLabel.getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Fallback to alert if ResultView fails to load
+            showError("Error showing results: " + e.getMessage());
+        }
     }
 
     private void saveScore() {

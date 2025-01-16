@@ -18,7 +18,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import quizgame.quizgame.utils.DatabaseConnection;
-import quizgame.quizgame.models.User; // Assume you have this class
+import quizgame.quizgame.models.User;
 import quizgame.quizgame.utils.AuthManager;
 
 public class StartQuizController {
@@ -41,11 +41,10 @@ public class StartQuizController {
         "Computers", "18"
     );
 
-    private User currentUser; // Add this field
+    private User currentUser;
 
     @FXML
     public void initialize() {
-        // Get current user from authentication system
         currentUser = AuthManager.getCurrentUser();
         if (currentUser == null) {
             showError("Error: Not logged in");
@@ -58,10 +57,7 @@ public class StartQuizController {
         privateSubjectsContainer.getChildren().clear();
         
         try (Connection conn = DatabaseConnection.getConnection()) {
-            // Debug print
             System.out.println("Current user ID: " + currentUser.getId());
-
-            // Modified query to get all private subjects
             String sql = """
                 SELECT s.* FROM subjects s 
                 LEFT JOIN subject_access sa ON s.id = sa.subject_id 
@@ -86,15 +82,13 @@ public class StartQuizController {
                 System.out.println("Found private subject: " + name + ", code: " + code + ", id: " + id);
                 
                 Button subjectButton = createSubjectButton(name, code, id);
-                subjectButton.setStyle("-fx-background-color: #F7931D;"); // Match the style of other buttons
+                subjectButton.setStyle("-fx-background-color: #F7931D;");
                 privateSubjectsContainer.getChildren().add(subjectButton);
             }
             
-            // Debug print
             System.out.println("Total private subjects found: " + count);
             
             if (count == 0) {
-                // Add a label to show no subjects found
                 javafx.scene.control.Label noSubjectsLabel = new javafx.scene.control.Label("No private subjects available");
                 noSubjectsLabel.setStyle("-fx-text-fill: #666; -fx-font-size: 14px;");
                 privateSubjectsContainer.getChildren().add(noSubjectsLabel);
@@ -124,7 +118,6 @@ public class StartQuizController {
             pstmt.setString(2, code);
             
             if (pstmt.executeQuery().next()) {
-                // Code is valid, grant access and proceed to quiz selection
                 grantAccess(subjectId, currentUser.getId());
                 showPrivateQuizSelection(subject, subjectId);
             } else {
@@ -138,14 +131,11 @@ public class StartQuizController {
 
     private void showInvitationCodeDialog(String subject, String correctCode, int subjectId) {
         try {
-            // Check if user already has access
             if (hasAccess(subjectId)) {
-                // If they have access, directly show quiz selection
                 showPrivateQuizSelection(subject, subjectId);
                 return;
             }
             
-            // If no access, show invitation code dialog
             FXMLLoader loader = new FXMLLoader(App.class.getResource("views/InvitationCodeModal.fxml"));
             Parent modalRoot = loader.load();
             
@@ -185,11 +175,6 @@ public class StartQuizController {
             e.printStackTrace();
             return false;
         }
-    }
-
-    private boolean isValidInvitationCode(String code) {
-        // Add your validation logic here
-        return code != null && !code.trim().isEmpty();
     }
 
     private void showError(String message) {
@@ -255,34 +240,6 @@ public class StartQuizController {
         }
     }
 
-    private void showQuizSettingsModal(String category, String categoryId) {
-        try {
-            // Only handle public categories
-            if (!categoryId.startsWith("private_")) {
-                FXMLLoader loader = new FXMLLoader(App.class.getResource("views/QuizSettingsModal.fxml"));
-                Parent modalRoot = loader.load();
-                
-                Stage modalStage = new Stage();
-                modalStage.initModality(Modality.APPLICATION_MODAL);
-                modalStage.initOwner(privateSubjectsContainer.getScene().getWindow());
-                modalStage.setTitle("Quiz Settings");
-                
-                QuizSettingsModalController modalController = loader.getController();
-                modalController.initData(category, categoryId);
-                
-                Scene modalScene = new Scene(modalRoot);
-                modalStage.setScene(modalScene);
-                modalStage.showAndWait();
-                
-                if (modalController.isConfirmed()) {
-                    startQuiz(modalController);
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     private void showPrivateQuizSelection(String category, int subjectId) {
         try {
             FXMLLoader loader = new FXMLLoader(App.class.getResource("views/PrivateQuizSelectionModal.fxml"));
@@ -305,40 +262,6 @@ public class StartQuizController {
         }
     }
 
-    private void startPrivateQuiz(String category, QuizInfo quiz) {
-        try {
-            FXMLLoader loader = new FXMLLoader(App.class.getResource("views/quizView.fxml"));
-            Parent root = loader.load();
-            
-            QuizViewController controller = loader.getController();
-            controller.initQuiz(
-                category,
-                String.valueOf(quiz.getId()),
-                "10", // Fixed number of questions for private quizzes
-                quiz.getLevel().toLowerCase(),
-                String.valueOf(quiz.getDuration())
-            );
-            
-            Stage stage = (Stage) booksButton.getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-            showError("Error starting quiz");
-        }
-    }
-
-    private void showPrivateQuizFlow(String subject, String invitationCode, int subjectId) {
-        // First check if user has access
-        if (hasAccess(subjectId)) {
-            // If they have access, show quiz selection directly
-            showPrivateQuizSelection(subject, subjectId);
-        } else {
-            // If they don't have access, show invitation code dialog
-            showInvitationCodeDialog(subject, invitationCode, subjectId);
-        }
-    }
 
     private void grantAccess(int subjectId, int userId) {
         try (Connection conn = DatabaseConnection.getConnection()) {

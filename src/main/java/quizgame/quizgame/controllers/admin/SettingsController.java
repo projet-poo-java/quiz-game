@@ -144,7 +144,7 @@ public class SettingsController {
             } finally {
                 if (connection != null) {
                     try {
-                        connection.setAutoCommit(true); // Reset auto-commit
+                        connection.setAutoCommit(true);
                         connection.close();
                     } catch (SQLException e) {
                         e.printStackTrace();

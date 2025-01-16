@@ -15,16 +15,15 @@ public class AuthManager {
 
     public static User getCurrentUser() {
         if (currentUser == null) {
-            // For testing, return a dummy user with all fields
             return new User(
-                1,                  // id
-                "Test User",       // name
-                "test@example.com", // email
-                "1234567890",      // phone
-                "password123",      // password
-                1,                 // isEmailVerified
-                "user",           // role
-                new Timestamp(System.currentTimeMillis()) // createdAt
+                1,
+                "Test User",
+                "test@example.com",
+                "1234567890",
+                "password123",
+                1,
+                "user",
+                new Timestamp(System.currentTimeMillis())
             );
         }
         return currentUser;

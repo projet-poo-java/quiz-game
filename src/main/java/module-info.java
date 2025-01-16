@@ -4,6 +4,7 @@ module quizgame.quizgame {
     requires transitive java.sql;
     requires java.net.http;
     requires com.google.gson;
+    requires jdk.crypto.ec;
 
     opens quizgame.quizgame to javafx.fxml, com.google.gson;
     opens quizgame.quizgame.controllers to javafx.fxml, com.google.gson;

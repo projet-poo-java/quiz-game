@@ -142,7 +142,7 @@ public class AuthController implements Initializable {
                     psInsert.setString(4, "user"); // default role
                     psInsert.executeUpdate();
 
-                    changeScene(event, "profile.fxml", "Profile", email, name);
+                    RoleMiddleWare.redirectBasedOnRole(event, "user", email, name);
                 }
             }
         } catch (SQLException | NoSuchAlgorithmException e) {

@@ -15,6 +15,11 @@ import java.net.http.HttpResponse;
 import com.google.gson.Gson;
 import javafx.scene.Scene;
 import quizgame.quizgame.App;
+import java.security.SecureRandom;
+import java.security.cert.X509Certificate;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 
 public class QuizViewController {
     @FXML private Label categoryLabel;
@@ -62,7 +67,7 @@ public class QuizViewController {
     }
 
     private void fetchQuestions(String categoryId, String numberOfQuestions, String difficulty) {
-        HttpClient client = HttpClient.newHttpClient();
+        HttpClient client = createHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://opentdb.com/api.php?amount=" + numberOfQuestions +
                         "&category=" + categoryId +
@@ -79,6 +84,66 @@ public class QuizViewController {
                 });
     }
 
+    private HttpClient createHttpClient() {
+        try {
+            TrustManager[] trustAllCerts = new TrustManager[] {
+                new X509TrustManager() {
+                    public X509Certificate[] getAcceptedIssuers() { return null; }
+                    public void checkClientTrusted(X509Certificate[] certs, String authType) { }
+                    public void checkServerTrusted(X509Certificate[] certs, String authType) { }
+                }
+            };
+
+            SSLContext sslContext = SSLContext.getInstance("TLS");
+            sslContext.init(null, trustAllCerts, new SecureRandom());
+
+            return HttpClient.newBuilder()
+                .sslContext(sslContext)
+                .build();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return HttpClient.newHttpClient();
+        }
+    }
+
+    private void loadQuestions() {
+        try {
+            HttpClient client = createHttpClient();
+            HttpRequest request = HttpRequest.newBuilder()
+                .uri(new URI("https://your-api-endpoint.com/api/questions"))
+                .GET()
+                .build();
+
+            System.out.println("Sending request to API..."); // Debug log
+            
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            
+            if (response.statusCode() == 200) {
+                System.out.println("API Response: " + response.body()); // Debug log
+                Gson gson = new Gson();
+                QuizData quizData = gson.fromJson(response.body(), QuizData.class);
+                
+                if (quizData != null && quizData.getResults() != null) {
+                    questions = quizData.getResults();
+                    displayQuestion(currentQuestionIndex);
+                } else {
+                    showError("Error", "No questions received from API");
+                }
+            } else {
+                showError("API Error", "Status code: " + response.statusCode());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            showError("Error", "Failed to load questions: " + e.getMessage());
+        }
+    }
+
+    private void showError(String title, String content) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
 
     // Décoder les questions Base64
     private void processQuestionsBase64(String jsonResponse) {

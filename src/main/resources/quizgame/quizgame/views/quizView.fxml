@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="900.0" style="-fx-background-image: url('file:src/main/resources/quizgame/quizgame/assets/images/purple_watercolour_background_corners.jpg');" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizgame.quizgame.controllers.QuizViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="900.0" style="-fx-background-image: url('file:src/main/resources/quizgame/quizgame/assets/images/purple_watercolour_background_corners.jpg');" stylesheets="@../assets/css/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizgame.quizgame.controllers.QuizViewController">
    <children>
       <Label prefHeight="525.0" prefWidth="900.0" styleClass="bgImg" />
       <AnchorPane prefHeight="70.0" prefWidth="900.0" style="-fx-background-color: #533B7C;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -65,10 +65,10 @@
       </AnchorPane>
       <AnchorPane layoutX="1.0" layoutY="450.0" prefHeight="74.0" prefWidth="90.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0">
          <children>
-            <Button layoutX="52.0" layoutY="19.0" onAction="#onQuitButtonClick" prefHeight="35.0" prefWidth="63.0" style="-fx-background-color: gray; -fx-text-fill: white;" text="Quit" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="20.0" />
-            <Button layoutX="118.0" layoutY="20.0" onAction="#onPreviousButtonClick" prefHeight="36.0" prefWidth="92.0" style="-fx-background-color: #533B7C; -fx-text-fill: white;" text="Previous" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="690.0" AnchorPane.topAnchor="20.0" />
+            <Button layoutX="52.0" layoutY="19.0" onAction="#onQuitButtonClick" prefHeight="35.0" prefWidth="63.0" style="-fx-background-color: #DC3545;" styleClass="categoryButton" text="Quit" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="20.0" />
+            <Button layoutX="118.0" layoutY="20.0" onAction="#onPreviousButtonClick" prefHeight="36.0" prefWidth="92.0" style="-fx-background-color: #F58720;" styleClass="categoryButton" text="Previous" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="690.0" AnchorPane.topAnchor="20.0" />
 
-            <Button layoutX="763.0" layoutY="20.0" onAction="#onNextButtonClick" prefHeight="36.0" prefWidth="106.0" style="-fx-background-color: #533B7C; -fx-text-fill: white;" text="Next Question" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="20.0" />
+            <Button layoutX="763.0" layoutY="20.0" onAction="#onNextButtonClick" prefHeight="36.0" prefWidth="106.0" styleClass="categoryButton" text="Next Question" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="20.0" />
          </children>
       </AnchorPane>
    </children>

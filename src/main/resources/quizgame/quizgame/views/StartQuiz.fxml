@@ -20,12 +20,12 @@
         </HBox>
         <HBox alignment="CENTER" prefHeight="59.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
             <children>
-                <Button fx:id="historyButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" style="-fx-background-color: #F7931D;" styleClass="categoryButton" text="History">
+                <Button fx:id="historyButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" styleClass="categoryButton" text="History">
                     <font>
                         <Font size="13.0" />
                     </font>
                 </Button>
-                <Button fx:id="mathButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" style="-fx-background-color: #F7931D;" styleClass="categoryButton" text="Mathematics">
+                <Button fx:id="mathButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" styleClass="categoryButton" text="Mathematics">
                     <HBox.margin>
                         <Insets left="50.0" />
                     </HBox.margin>
@@ -33,7 +33,7 @@
                         <Font size="13.0" />
                     </font>
                 </Button>
-                <Button fx:id="computersButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" style="-fx-background-color: #F7931D;" styleClass="categoryButton" text="Computers">
+                <Button fx:id="computersButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" styleClass="categoryButton" text="Computers">
                     <HBox.margin>
                         <Insets left="50.0" />
                     </HBox.margin>
@@ -41,7 +41,7 @@
                         <Font size="13.0" />
                     </font>
                 </Button>
-                <Button fx:id="booksButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" style="-fx-background-color: #F7931D;" styleClass="categoryButton" text="Books">
+                <Button fx:id="booksButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" styleClass="categoryButton" text="Books">
                     <HBox.margin>
                         <Insets left="50.0" />
                     </HBox.margin>
@@ -49,7 +49,7 @@
                         <Font size="13.0" />
                     </font>
                 </Button>
-                <Button fx:id="natureButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" style="-fx-background-color: #F7931D;" styleClass="categoryButton" text="Nature">
+                <Button fx:id="natureButton" onAction="#onCategoryClick" prefHeight="60.0" prefWidth="120.0" styleClass="categoryButton" text="Nature">
                     <HBox.margin>
                         <Insets left="50.0" />
                     </HBox.margin>
